@@ -63,7 +63,7 @@ coursesArr.forEach((e, i) => {
     courseName.textContent = e.names;
     card.appendChild(courseDescriptionUList);
     e.description.forEach((el, i) => {
-        courseDescriptionItem.textContent = el[i];
+        courseDescriptionItem.textContent = el;
         courseDescriptionUList.appendChild(courseDescriptionItem);
     })
 

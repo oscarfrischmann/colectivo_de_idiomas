@@ -12,8 +12,8 @@ class Course {
     }
 }
 
-coursesArr.push(new Course('nivel', 'principiante', 'a1, a2', descriptionsBeguiner));
-coursesArr.push(new Course('nivel', 'intermedio', 'b1, b1+, b2', descriptionsInter));
+coursesArr.push(new Course('nivel', 'principiante', 'a1/a2', descriptionsBeguiner));
+coursesArr.push(new Course('nivel', 'intermedio', 'b1/b2', descriptionsInter));
 console.log(coursesArr)
 
 const cardContainer = document.getElementById('cardContainer');
@@ -53,21 +53,16 @@ cardButton.classList.add('btn');
 coursesArr.forEach((e, i) => {
     cardContainer.appendChild(card);
     card.appendChild(cardTittle);
-    cardTittle.appendChild(cardTittleOne);
-    cardTittleOne.textContent = e.tittle;
-    cardTittle.appendChild(cardTittleTwo);
-    cardTittleTwo.textContent = e.level;
+    cardTittle.appendChild(cardTittleOne).innerHTML = e.tittle;
+    cardTittle.appendChild(cardTittleTwo).innerHTML = e.level;
     card.appendChild(cardCourseNames);
     cardCourseNames.appendChild(bubbleImg);
-    cardCourseNames.appendChild(courseName);
-    courseName.textContent = e.names;
+    cardCourseNames.appendChild(courseName).innerHTML = e.names;
     card.appendChild(courseDescriptionUList);
-    e.description.forEach((el, i) => {
-        courseDescriptionItem.textContent = el;
-        courseDescriptionUList.appendChild(courseDescriptionItem);
-    })
+    e.description.forEach((el) => {
+        courseDescriptionUList.appendChild(courseDescriptionItem).innerHTML = el;
+    });
 
-    console.log(card)
     console.log('e', e)
-    console.log('i', i)
+
 })

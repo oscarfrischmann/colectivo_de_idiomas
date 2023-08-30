@@ -76,7 +76,7 @@
 .card__course-names span {
   position: absolute;
   top: 23%;
-  left: 8%;
+  left: 13%;
   font-size: 1.4rem;
   text-transform: uppercase;
 }
@@ -188,7 +188,7 @@ nav {
 
 .courses {
   width: 100%;
-  background-image: url(/img/purpura.png);
+  background-image: url(img/purpura.png);
   background-repeat: no-repeat;
   background-position: 10% 0%;
   margin-bottom: 4rem;

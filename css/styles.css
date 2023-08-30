@@ -1,0 +1,235 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  color: #000000;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roboto thin";
+  src: url("../fonts/roboto/Roboto-Thin.ttf");
+}
+@font-face {
+  font-family: "Roboto bold";
+  src: url("../fonts/roboto/Roboto-Bold.ttf");
+}
+.btn {
+  background-color: #FBE800;
+  padding: 0.7rem 1rem;
+  width: 100px;
+  border: none;
+  border-radius: 25px;
+  text-transform: uppercase;
+  color: #706F6F;
+  font-size: 0.8rem;
+  font-family: "roboto bold";
+  text-align: center;
+  margin: 1rem 4rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px;
+}
+.btn:active {
+  box-shadow: 1px 1px 1px;
+}
+
+.card {
+  max-width: 400px;
+  width: 335px;
+  height: 240px;
+  margin: 0 auto 1rem auto;
+  padding: 5px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 5px;
+  display: grid;
+  grid-template-columns: repeat(6, 55.83px);
+  grid-template-rows: repeat(3, 80px);
+  grid-template-areas: "tittle tittle tittle names names names" "specs specs specs specs imgBtn imgBtn" "specs specs specs specs imgBtn imgBtn";
+  background-image: linear-gradient(180deg, #40B9B9 0% 38%, transparent 38% 100%);
+}
+.card__tittle {
+  grid-area: tittle;
+  padding-right: 1em;
+}
+.card__tittle--one {
+  font-size: 2rem;
+  color: #E2318A;
+  justify-self: end;
+  text-transform: uppercase;
+  text-align: end;
+}
+.card__tittle--two {
+  font-size: 1rem;
+  font-family: "Roboto thin";
+  text-transform: uppercase;
+  text-align: end;
+}
+.card__type {
+  grid-area: tittle;
+}
+.card__course-names {
+  grid-area: names;
+  position: relative;
+}
+.card__course-names img {
+  width: 146px;
+}
+.card__course-names span {
+  position: absolute;
+  top: 23%;
+  left: 13%;
+  font-size: 2rem;
+}
+.card ul {
+  width: 250px;
+  grid-area: specs;
+  padding: 20px 35px;
+}
+.card__img-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0;
+  grid-area: imgBtn;
+}
+.card__img-btn img {
+  width: 70px;
+  place-self: flex-start;
+}
+.card__img-btn button {
+  place-self: end;
+  margin-top: -5px;
+  margin-right: 33px;
+}
+
+body {
+  max-width: 1200px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.tittle {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0;
+}
+.tittle__first {
+  font-family: "Roboto thin";
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #E2318A;
+}
+.tittle__main {
+  font-family: "Roboto bold";
+  font-size: 4.3rem;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+.tittle__main--two {
+  font-family: "Roboto thin";
+  font-size: 4rem;
+  text-transform: capitalize;
+}
+.tittle__span {
+  font-family: "Roboto light";
+  padding-left: 50px;
+  font-size: 1.1rem;
+}
+.tittle__paragraph, .courses__paragraph {
+  width: 65vw;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #565454;
+  place-self: center;
+}
+.tittle__paragraph a, .courses__paragraph a {
+  color: #40B9B9;
+}
+.tittle img {
+  width: 350px;
+  place-self: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: start;
+  gap: 0;
+  width: 100vw;
+  height: 150px;
+  background-image: url(../img/amarillo_top.png);
+  background-position: center top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 10px 20px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.dropdown-icon {
+  color: #E2318A;
+  margin: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.courses {
+  width: 100%;
+  background-image: url(/img/purpura.png);
+  background-repeat: no-repeat;
+  background-position: 10% 0%;
+  margin-bottom: 4rem;
+}
+.courses__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.courses__main img {
+  width: 130px;
+  margin: 30px 0 30px 0;
+}
+.courses__tittle {
+  font-family: "Roboto bold";
+  font-size: 3rem;
+  place-self: end;
+  margin: 10px 30px 0 0;
+  text-transform: capitalize;
+}
+.courses__span {
+  font-family: "Roboto thin";
+  font-size: 1.5rem;
+  place-self: end;
+  margin: 0 30px 30px 0;
+}
+.courses__levels {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  body {
+    width: 80vw;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav {
+    height: 200px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

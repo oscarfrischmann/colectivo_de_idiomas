@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
+    <title>El colectivo de Idiomas</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <i class="fas fa-solid fa-bars dropdown-icon"></i>
+            <div>
+                <ul class="dropdown__menu"></ul>
+            </div>
+            <img class="logo" src="img/Logo_ECDI-transparente-03-solo-nombre.png" alt="">
+            <h1 class="clipped"></h1>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="tittle">
+            <h3 class="tittle__first">nuevos cursos</h3>
+            <h2 class="tittle__main">aprendé</h2>
+            <h2 class="tittle__main--two">inglés</h2>
+            <span class="tittle__span">con la cercanía de lo personal</span>
+            <buttton id="courses__btn" class="btn">cursos</buttton>
+            <p class="tittle__paragraph">Orientados a que puedas mejorar tus habilidades para comunicarte: vas a
+                adquirir nuevo vocabulario y a manejar con más seguridad las estructuras del idioma para poder hablar
+                con más fluidez.
+                <a href="">Click para saber más sobre cómo trabajamos.</a>
+            </p>
+            <img src="img/Logo_ECDI-transparente-02-solo-caras.png" alt="Logo de El Colectivo de Idiomas">
+        </section>
+
+        <section class="courses">
+            <article class="courses__main">
+                <h2 class="courses__tittle">cursos</h2>
+                <h3 class="courses__span">de inglés general</h3>
+                <p class="courses__paragraph">Están divididos en niveles
+                    desde Elemental hasta Avanzado,
+                    homologados con el MCER.
+                    Cada nivel se completa al finalizar
+                    dos cuatrimestres de estudio.</p>
+                <img src="img/colectivo-amarillo.png" alt="">
+            </article>
+
+            <article class="courses__levels" id="cardContainer">
+                <div class="card">
+                    <div class="card__tittle">
+                        <h4 class="card__tittle--one">nivel</h4>
+                        <h5 class="card__tittle--two">principiantes</h5>
+                    </div>
+                    <div class="card__course-names">
+                        <img src="/img/burbuja-rosa.png" alt="">
+                        <span>A1, A2</span>
+                    </div>
+                    <ul>
+                        <li>Aprendé Inglés desde cero.</li>
+                        <li>Hablá desde el primer dia.</li>
+                        <li>Grupos reducidos.</li>
+                    </ul>
+                    <div class="card__img-btn">
+                        <img src="img/gatito.png" alt="">
+                        <button id="beginnerBtn" class="btn">ver más</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+
+
+
+
+    </main>
+    <footer></footer>
+<script src="./js/assets/level_cards.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

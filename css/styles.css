@@ -76,8 +76,9 @@
 .card__course-names span {
   position: absolute;
   top: 23%;
-  left: 13%;
-  font-size: 2rem;
+  left: 8%;
+  font-size: 1.4rem;
+  text-transform: uppercase;
 }
 .card ul {
   width: 250px;

@@ -31,7 +31,7 @@ const cardTittleTwo = document.createElement('h5');
 cardTittleTwo.classList.add('card__tittle--two')
 
 const cardCourseNames = document.createElement('div');
-cardCourseNames.classList.add('card__course-name');
+cardCourseNames.classList.add('card__course-names');
 
 const bubbleImg = document.createElement('img');
 bubbleImg.setAttribute('src', '/img/burbuja-rosa.png');
@@ -53,9 +53,21 @@ cardButton.classList.add('btn');
 coursesArr.forEach((e, i) => {
     cardContainer.appendChild(card);
     card.appendChild(cardTittle);
-    cardTittle.appendChild(cardTittleOne)
+    cardTittle.appendChild(cardTittleOne);
     cardTittleOne.textContent = e.tittle;
+    cardTittle.appendChild(cardTittleTwo);
+    cardTittleTwo.textContent = e.level;
+    card.appendChild(cardCourseNames);
+    cardCourseNames.appendChild(bubbleImg);
+    cardCourseNames.appendChild(courseName);
+    courseName.textContent = e.names;
+    card.appendChild(courseDescriptionUList);
+    e.description.forEach((el, i) => {
+        courseDescriptionItem.textContent = el[i];
+        courseDescriptionUList.appendChild(courseDescriptionItem);
+    })
+
     console.log(card)
-    console.log('e',e)
+    console.log('e', e)
     console.log('i', i)
 })

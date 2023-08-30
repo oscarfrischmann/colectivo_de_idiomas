@@ -34,7 +34,7 @@ const cardCourseNames = document.createElement('div');
 cardCourseNames.classList.add('card__course-names');
 
 const bubbleImg = document.createElement('img');
-bubbleImg.setAttribute('src', '/img/burbuja-rosa.png');
+bubbleImg.setAttribute('src', './img/burbuja-rosa.png');
 
 const courseName = document.createElement('span');
 
@@ -45,7 +45,7 @@ const cardImgBtn = document.createElement('div');
 cardImgBtn.classList.add('card__img-btn');
 
 const catImg = document.createElement('img');
-catImg.setAttribute('src', 'img/gatito.png');
+catImg.setAttribute('src', './img/gatito.png');
 
 const cardButton = document.createElement('button');
 cardButton.classList.add('btn');

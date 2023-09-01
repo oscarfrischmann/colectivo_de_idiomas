@@ -3,7 +3,7 @@ const descriptionsBeguiner = ['Aprendé Inglés desde cero.', 'Hablá desde el p
 const descriptionsInter = ['Mejorá tu nivel de inglés.', 'Hablá desde el primer dia.', 'Grupos reducidos.'];
 // const descriptionsAdv = ['Aprendé Inglés desde cero.', 'Hablá desde el primer dia.', 'Grupos reducidos.'];
 
-class Course {
+class Level {
     constructor(tittle, level, names, description) {
         this.tittle = tittle;
         this.level = level;
@@ -12,57 +12,69 @@ class Course {
     }
 }
 
-coursesArr.push(new Course('nivel', 'principiante', 'a1/a2', descriptionsBeguiner));
-coursesArr.push(new Course('nivel', 'intermedio', 'b1/b2', descriptionsInter));
+coursesArr.push(new Level('nivel', 'principiante', 'a1/a2', descriptionsBeguiner));
+coursesArr.push(new Level('nivel', 'intermedio', 'b1/b2', descriptionsInter));
+coursesArr.push(new Level('nivel', 'avanzado', 'c1/c2', descriptionsInter));
+
 console.log(coursesArr)
 
 const cardContainer = document.getElementById('cardContainer');
 
-const card = document.createElement('div');
-card.classList.add("card");
+function createLevelCards() {
+    coursesArr.forEach((e, i) => {
+        const card = document.createElement('div');
+        card.classList.add("card");
+    
+        const cardTittle = document.createElement('div');
+        cardTittle.classList.add("card__tittle");
+    
+        const cardTittleOne = document.createElement('h4');
+        cardTittleOne.classList.add("card__tittle--one");
+    
+        const cardTittleTwo = document.createElement('h5');
+        cardTittleTwo.classList.add('card__tittle--two')
+    
+        const cardCourseNames = document.createElement('div');
+        cardCourseNames.classList.add('card__course-names');
+    
+        const bubbleImg = document.createElement('img');
+        bubbleImg.setAttribute('src', './img/burbuja-rosa.png');
+    
+        const courseName = document.createElement('span');
+    
+        const courseDescriptionUList = document.createElement('ul');
+    
+        const cardImgBtn = document.createElement('div');
+        cardImgBtn.classList.add('card__img-btn');
+    
+        const catImg = document.createElement('img');
+        catImg.setAttribute('src', './img/gatito.png');
+    
+        const cardButton = document.createElement('button');
+        cardButton.classList.add('btn');
+    
+        cardContainer.appendChild(card);
+        card.appendChild(cardTittle);
+        cardTittle.appendChild(cardTittleOne).innerHTML = e.tittle;
+        cardTittle.appendChild(cardTittleTwo).innerHTML = e.level;
+        card.appendChild(cardCourseNames);
+        cardCourseNames.appendChild(bubbleImg);
+        cardCourseNames.appendChild(courseName).innerHTML = e.names;
+        card.appendChild(courseDescriptionUList);
+        e.description.forEach((el) => {
+            const courseDescriptionItem = document.createElement('li');
+    
+            courseDescriptionUList.appendChild(courseDescriptionItem).innerHTML = el;
+        });
+    
+        card.appendChild(cardImgBtn);
+        cardImgBtn.appendChild(catImg);
+        cardImgBtn.appendChild(cardButton).textContent = 'ver más';
+        cardButton.setAttribute('id', `courseBtn${i}`)
+    
+        console.log('e', e)
+    
+    })
+};
 
-const cardTittle = document.createElement('div');
-cardTittle.classList.add("card__tittle");
 
-const cardTittleOne = document.createElement('h4');
-cardTittleOne.classList.add("card__tittle--one");
-
-const cardTittleTwo = document.createElement('h5');
-cardTittleTwo.classList.add('card__tittle--two')
-
-const cardCourseNames = document.createElement('div');
-cardCourseNames.classList.add('card__course-names');
-
-const bubbleImg = document.createElement('img');
-bubbleImg.setAttribute('src', './img/burbuja-rosa.png');
-
-const courseName = document.createElement('span');
-
-const courseDescriptionUList = document.createElement('ul');
-const courseDescriptionItem = document.createElement('li');
-
-const cardImgBtn = document.createElement('div');
-cardImgBtn.classList.add('card__img-btn');
-
-const catImg = document.createElement('img');
-catImg.setAttribute('src', './img/gatito.png');
-
-const cardButton = document.createElement('button');
-cardButton.classList.add('btn');
-
-coursesArr.forEach((e, i) => {
-    cardContainer.appendChild(card);
-    card.appendChild(cardTittle);
-    cardTittle.appendChild(cardTittleOne).innerHTML = e.tittle;
-    cardTittle.appendChild(cardTittleTwo).innerHTML = e.level;
-    card.appendChild(cardCourseNames);
-    cardCourseNames.appendChild(bubbleImg);
-    cardCourseNames.appendChild(courseName).innerHTML = e.names;
-    card.appendChild(courseDescriptionUList);
-    e.description.forEach((el) => {
-        courseDescriptionUList.appendChild(courseDescriptionItem).innerHTML = el;
-    });
-
-    console.log('e', e)
-
-})

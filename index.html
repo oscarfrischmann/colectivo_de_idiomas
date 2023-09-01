@@ -26,12 +26,13 @@
 
     <main>
         <section class="tittle">
-            <h3 class="tittle__first">nuevos cursos</h3>
+            <h3 class="tittle__first">abierta la inscripción</h3>
             <h2 class="tittle__main">aprendé</h2>
-            <h2 class="tittle__main--two">inglés</h2>
+            <h2 class="tittle__main--two">inglés online</h2>
             <span class="tittle__span">con la cercanía de lo personal</span>
             <buttton id="courses__btn" class="btn">cursos</buttton>
-            <p class="tittle__paragraph">Orientados a que puedas mejorar tus habilidades para comunicarte: vas a
+            <p class="tittle__paragraph">Orientados a que puedas desarrolar y mejorar tus habilidades para comunicarte.
+                Vas a
                 adquirir nuevo vocabulario y a manejar con más seguridad las estructuras del idioma para poder hablar
                 con más fluidez.
                 <a href="">Click para saber más sobre cómo trabajamos.</a>
@@ -40,19 +41,21 @@
         </section>
 
         <section class="courses">
-            <article class="courses__main">
-                <h2 class="courses__tittle">cursos</h2>
-                <h3 class="courses__span">de inglés general</h3>
-                <p class="courses__paragraph">Están divididos en niveles
-                    desde Elemental hasta Avanzado,
-                    homologados con el MCER.
-                    Cada nivel se completa al finalizar
-                    dos cuatrimestres de estudio.</p>
-                <img src="img/colectivo-amarillo.png" alt="">
+            <article class="courses__cards" id="coursesCardContainer"> 
+            <!-- <div class="courses__card-container"> CARD
+                    <div class="courses__card-header">
+                        <h4>cambridge</h4>
+                        <img src="./img/cambridge.png" alt="">
+                        <h5>preparación de exámenes</h5>
+                    </div>
+                    <p>En estos cursos brindamos todas las herramientas necesarias para poder rendir los exámenes
+                        internacionales de Cambridge, FIRST y AVANCED. La preparación se completa al cabo de dos
+                        cuatrimestres de estudio. Es necesaria una evaluación de nivel previa.</p>
+                    <button class="btn">ver más</button>
+                </div> -->
             </article>
-
             <article class="courses__levels" id="cardContainer">
-                <div class="card">
+                <!-- <div class="card">
                     <div class="card__tittle">
                         <h4 class="card__tittle--one">nivel</h4>
                         <h5 class="card__tittle--two">principiantes</h5>
@@ -70,7 +73,7 @@
                         <img src="./img/gatito.png" alt="">
                         <button id="beginnerBtn" class="btn">ver más</button>
                     </div>
-                </div>
+                </div> -->
             </article>
         </section>
 
@@ -80,8 +83,9 @@
 
     </main>
     <footer></footer>
-<script src="./js/assets/level_cards.js"></script>
-    <script src="js/main.js"></script>
+    <script src="./js/assets/courses.js"></script>
+    <script src="./js/assets/level_cards.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

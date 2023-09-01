@@ -76,7 +76,7 @@
 .card__course-names span {
   position: absolute;
   top: 23%;
-  left: 13%;
+  left: 18%;
   font-size: 1.4rem;
   text-transform: uppercase;
 }
@@ -101,6 +101,43 @@
   place-self: end;
   margin-top: -5px;
   margin-right: 33px;
+}
+
+.courses__card-container {
+  max-width: 400px;
+  width: 335px;
+  height: auto;
+  margin: 0 auto 1rem auto;
+  padding: 5px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 5px;
+}
+.courses__card-header {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, 1fr);
+}
+.courses img {
+  grid-row: -3/-1;
+  grid-column: 2/3;
+  width: 90px;
+  padding: 10px;
+  justify-self: center;
+}
+.courses h4 {
+  font-family: "Roboto bold";
+  font-size: 2rem;
+  text-transform: capitalize;
+  align-self: end;
+  justify-self: end;
+}
+.courses h5 {
+  font-family: "Roboto thin";
+  font-size: 1.1rem;
+  justify-self: end;
+}
+.courses p {
+  margin: 0 1em;
 }
 
 body {
@@ -128,6 +165,7 @@ main {
   font-size: 1rem;
   text-transform: uppercase;
   color: #E2318A;
+  margin-left: 20px;
 }
 .tittle__main {
   font-family: "Roboto bold";
@@ -137,7 +175,7 @@ main {
 }
 .tittle__main--two {
   font-family: "Roboto thin";
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-transform: capitalize;
 }
 .tittle__span {
@@ -168,7 +206,6 @@ nav {
   gap: 0;
   width: 100vw;
   height: 150px;
-  background-image: url(../img/amarillo_top.png);
   background-position: center top;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -188,10 +225,6 @@ nav {
 
 .courses {
   width: 100%;
-  background-image: url(img/purpura.png);
-  background-repeat: no-repeat;
-  background-position: 10% 0%;
-  margin-bottom: 4rem;
 }
 .courses__main {
   display: flex;
@@ -216,6 +249,10 @@ nav {
   font-size: 1.5rem;
   place-self: end;
   margin: 0 30px 30px 0;
+}
+.courses__span em {
+  font-style: unset;
+  color: #E2318A;
 }
 .courses__levels {
   width: 90%;

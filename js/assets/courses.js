@@ -36,6 +36,9 @@ courses.forEach((course, i) => {
 
     tag.forEach((tag, tagI) => {
         if (tag === 'h4' || tag === 'img' || tag === 'h5') {
+            for (const el in course) {
+                console.log(el)
+            }
             const htmlTag = document.createElement(tag);
             headerDiv.appendChild(htmlTag);
             console.log(course);

@@ -13,6 +13,10 @@
   font-family: "Roboto bold";
   src: url("../fonts/roboto/Roboto-Bold.ttf");
 }
+@font-face {
+  font-family: "segoe";
+  src: url("../fonts/SEGOEUI.TTF");
+}
 .btn {
   background-color: #FBE800;
   padding: 0.7rem 1rem;
@@ -137,11 +141,25 @@
   justify-self: end;
 }
 .courses p {
-  margin: 0 1em;
+  margin: 2em 2em;
+  font-family: "segoe";
+}
+
+#div0 h5, #div2 h5, #div3 h5 {
+  color: white;
+}
+
+#div1 h5, #div4 h5 {
+  color: #E2318A;
+}
+
+#div2 img {
+  width: 70%;
 }
 
 body {
   max-width: 1200px;
+  overflow-x: hidden;
 }
 
 main {
@@ -157,7 +175,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   gap: 0;
 }
 .tittle__first {
@@ -166,12 +184,14 @@ main {
   text-transform: uppercase;
   color: #E2318A;
   margin-left: 20px;
+  padding-right: 87px;
 }
 .tittle__main {
   font-family: "Roboto bold";
   font-size: 4.3rem;
   text-transform: capitalize;
   font-weight: bolder;
+  padding-right: 45px;
 }
 .tittle__main--two {
   font-family: "Roboto thin";
@@ -261,7 +281,6 @@ nav {
 
 @media (min-width: 768px) {
   body {
-    width: 80vw;
     max-width: 1200px;
     margin: 0 auto;
   }

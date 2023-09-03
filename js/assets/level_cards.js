@@ -20,7 +20,7 @@ console.log(coursesArr)
 
 const cardContainer = document.getElementById('cardContainer');
 
-function createLevelCards() {
+let createLevelCards = function () {
     coursesArr.forEach((e, i) => {
         const card = document.createElement('div');
         card.classList.add("card");

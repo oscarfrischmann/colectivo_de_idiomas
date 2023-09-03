@@ -17,6 +17,10 @@
   font-family: "segoe";
   src: url("../fonts/SEGOEUI.TTF");
 }
+.display-none {
+  display: none;
+}
+
 .btn {
   background-color: #FBE800;
   padding: 0.7rem 1rem;
@@ -226,6 +230,7 @@ nav {
   gap: 0;
   width: 100vw;
   height: 150px;
+  background-image: url(../img/amarillo_top.png);
   background-position: center top;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -277,6 +282,95 @@ nav {
 .courses__levels {
   width: 90%;
   margin: 0 auto;
+}
+
+.learn {
+  background-image: url(../../img/violeta.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  overflow: visible;
+  width: 100vw;
+}
+.learn article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.learn__tittles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin-top: 20px;
+}
+.learn__tittles h2 {
+  font-size: 3rem;
+  line-height: 31px;
+  color: white;
+}
+.learn__tittles span {
+  font-size: 2rem;
+}
+.learn img {
+  width: 60px;
+}
+.learn p {
+  font-family: "segoe";
+  font-size: 1.1rem;
+  width: 330px;
+  color: white;
+  background-color: #40B9B9;
+  padding: 2em;
+  border-radius: 30px;
+  margin: 3em 0;
+  border: 1px solid #706F6F;
+}
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+.about-us__bg {
+  position: absolute;
+  transform: scale(-1, 1) translate(-750px, -225px);
+  z-index: -1;
+}
+.about-us h2 {
+  color: #40B9B9;
+  font-family: "roboto";
+  font-size: 2.5rem;
+}
+.about-us__luana, .about-us__emilia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.about-us__luana img, .about-us__emilia img {
+  width: 187px;
+  padding: 2em 0.5em 1em 1em;
+  place-self: flex-start;
+}
+.about-us__luana p, .about-us__emilia p {
+  width: 187px;
+  padding: 0.5em 1em 0.5em 0.5em;
+}
+.about-us__luana p:nth-child(1), .about-us__emilia p:nth-child(1) {
+  color: #E2318A;
+}
+.about-us__emilia img {
+  padding: 2em 1em 1em 0.5em;
+}
+.about-us__emilia p {
+  padding: 0.5em 0.1em 0.5em 1em;
 }
 
 @media (min-width: 768px) {

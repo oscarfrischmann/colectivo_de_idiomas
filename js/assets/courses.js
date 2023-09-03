@@ -69,6 +69,11 @@ cardHeadersBG[3].style.backgroundImage = 'linear-gradient(180deg, #40B9B9 0% 30%
 cardHeadersBG[4].style.backgroundImage = 'linear-gradient(180deg, #FBE800 0% 30%, transparent 30% 100% )'
 
 
+const levelCourses = document.querySelector('.courses__card-container .btn');
 
+levelCourses.addEventListener("click", ()=>{
+    
+    cardHeadersBG[0].classList.toggle('display-none')
+})
 
 

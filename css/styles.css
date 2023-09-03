@@ -336,7 +336,7 @@ nav {
   align-items: center;
   gap: 0;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .about-us__bg {
   position: absolute;
@@ -348,30 +348,57 @@ nav {
   font-family: "roboto";
   font-size: 2.5rem;
 }
-.about-us__luana, .about-us__emilia {
+.about-us__luana {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0;
 }
-.about-us__luana img, .about-us__emilia img {
+.about-us__luana--photo {
   width: 187px;
   padding: 2em 0.5em 1em 1em;
   place-self: flex-start;
 }
-.about-us__luana p, .about-us__emilia p {
+.about-us__luana p {
   width: 187px;
   padding: 0.5em 1em 0.5em 0.5em;
 }
-.about-us__luana p:nth-child(1), .about-us__emilia p:nth-child(1) {
+.about-us__luana p:nth-child(1) {
   color: #E2318A;
 }
-.about-us__emilia img {
+.about-us__luana--arrow {
+  width: 110px;
+  position: absolute;
+  top: 240px;
+  left: 75px;
+  transform: rotate(30deg);
+}
+.about-us__emilia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.about-us__emilia--photo {
+  width: 187px;
   padding: 2em 1em 1em 0.5em;
+  place-self: flex-start;
 }
 .about-us__emilia p {
+  width: 187px;
   padding: 0.5em 0.1em 0.5em 1em;
+}
+.about-us__emilia p:nth-child(1) {
+  color: #E2318A;
+}
+.about-us__arrow {
+  width: 110px;
+  position: absolute;
+  top: 640px;
+  left: 170px;
+  transform: scale(-1, 1) rotate(30deg);
 }
 
 @media (min-width: 768px) {

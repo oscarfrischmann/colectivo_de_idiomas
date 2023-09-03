@@ -285,7 +285,7 @@ nav {
 }
 
 .learn {
-  background-image: url(../../img/violeta.png);
+  background-image: url(../img/violeta.png);
   background-repeat: no-repeat;
   background-position: right top;
   overflow: visible;
@@ -336,6 +336,7 @@ nav {
   align-items: center;
   gap: 0;
   position: relative;
+  overflow-x: hidden;
 }
 .about-us__bg {
   position: absolute;

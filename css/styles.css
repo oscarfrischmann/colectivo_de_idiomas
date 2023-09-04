@@ -21,6 +21,19 @@
   font-family: "segoe";
   src: url("../fonts/SEGOEUI.TTF");
 }
+.clipped {
+  clip: rect(0 0 0 0);
+  border: 0;
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  display: block;
+  margin: 0 -1px -1px 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  z-index: -1;
+}
+
 .display-none {
   display: none;
 }
@@ -289,11 +302,15 @@ nav {
 }
 
 .learn {
-  background-image: url(../img/violeta.png);
-  background-repeat: no-repeat;
-  background-position: right top;
-  overflow: visible;
-  width: 100vw;
+  position: relative;
+  padding-top: 100px;
+}
+.learn__bg {
+  width: 1200px;
+  position: absolute;
+  top: 70px;
+  right: -570px;
+  z-index: -1;
 }
 .learn article {
   display: flex;
@@ -313,12 +330,11 @@ nav {
 .learn__tittles h2 {
   font-size: 3rem;
   line-height: 31px;
-  color: white;
 }
 .learn__tittles span {
   font-size: 2rem;
 }
-.learn img {
+.learn__tittles--chat {
   width: 60px;
 }
 .learn p {
@@ -406,10 +422,13 @@ nav {
 }
 
 .footer {
-  margin: 3em 0;
+  margin: 3em 0 0 0;
+  overflow: hidden;
 }
 .footer__bg {
   width: 100vw;
+  position: absolute;
+  z-index: -1;
 }
 .footer__logo {
   width: 350px;
@@ -440,7 +459,7 @@ nav {
   font-size: 2rem;
   margin: 1em;
   text-transform: capitalize;
-  color: #3d3d3d;
+  color: #FBE800;
 }
 .footer__info--tittle:nth-of-type(3) {
   margin: 1em 0;
@@ -455,6 +474,17 @@ nav {
   text-transform: capitalize;
   text-align: center;
   line-height: 1.5em;
+  color: #3d3d3d;
+}
+.footer__end {
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.footer__end p {
   color: #3d3d3d;
 }
 

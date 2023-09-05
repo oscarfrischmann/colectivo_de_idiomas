@@ -62,11 +62,11 @@ courses.forEach((course, i) => {
 
 const cardHeadersBG = document.getElementsByClassName('courses__card-container');
 
-cardHeadersBG[0].style.backgroundImage = 'linear-gradient(180deg, #40B9B9 0% 30%, transparent 30% 100% )'
-cardHeadersBG[1].style.backgroundImage = 'linear-gradient(180deg, #FBE800 0% 30%, transparent 30% 100% )'
-cardHeadersBG[2].style.backgroundImage = 'linear-gradient(180deg, #E2318A 0% 30%, transparent 30% 100% )'
-cardHeadersBG[3].style.backgroundImage = 'linear-gradient(180deg, #40B9B9 0% 30%, transparent 30% 100% )'
-cardHeadersBG[4].style.backgroundImage = 'linear-gradient(180deg, #FBE800 0% 30%, transparent 30% 100% )'
+cardHeadersBG[0].style.backgroundImage = 'linear-gradient(180deg, #40B9B9 0% 25%, transparent 25% 100% )'
+cardHeadersBG[1].style.backgroundImage = 'linear-gradient(180deg, #FBE800 0% 25%, transparent 25% 100% )'
+cardHeadersBG[2].style.backgroundImage = 'linear-gradient(180deg, #E2318A 0% 25%, transparent 25% 100% )'
+cardHeadersBG[3].style.backgroundImage = 'linear-gradient(180deg, #40B9B9 0% 25%, transparent 25% 100% )'
+cardHeadersBG[4].style.backgroundImage = 'linear-gradient(180deg, #FBE800 0% 25%, transparent 25% 100% )'
 
 
 const levelCourses = document.querySelector('.courses__card-container .btn');

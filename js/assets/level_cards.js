@@ -53,7 +53,8 @@ let createLevelCards = function () {
         const cardButton = document.createElement('button');
         cardButton.classList.add('btn');
     
-        cardContainer.appendChild(card);
+        // cardContainer.appendChild(card);
+        coursesCardContainer.insertAdjacentElement('beforebegin', card);
         card.appendChild(cardTittle);
         cardTittle.appendChild(cardTittleOne).innerHTML = e.tittle;
         cardTittle.appendChild(cardTittleTwo).innerHTML = e.level;
@@ -72,9 +73,16 @@ let createLevelCards = function () {
         cardImgBtn.appendChild(cardButton).textContent = 'ver más';
         cardButton.setAttribute('id', `courseBtn${i}`)
     
-        console.log('e', e)
+      
+        const courseBtn0 = document.getElementById('courseBtn0');
+        const coursesCardDescription = document.getElementById('coursesCardDescription');
+        courseBtn0.addEventListener('click', ()=>{
+            card.classList.toggle('display-none');
+            coursesCardDescription.classList.toggle('display-none');
+        })
     
     })
 };
+
 
 

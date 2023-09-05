@@ -38,6 +38,37 @@
   display: none;
 }
 
+.courses__description--tittle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  font-family: "roboto bold";
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.courses__description--tittle h2 {
+  color: #3d3d3d;
+}
+.courses__description--card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 2px 2px 5px;
+  max-width: 400px;
+  width: 335px;
+  height: 450px;
+  margin: 15px auto;
+  border-radius: 30px;
+}
+.courses__description--list {
+  font-family: "segoe";
+  width: 80%;
+}
+
 .btn {
   background-color: #FBE800;
   padding: 0.7rem 1rem;

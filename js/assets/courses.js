@@ -74,6 +74,9 @@ const levelCourses = document.querySelector('.courses__card-container .btn');
 levelCourses.addEventListener("click", ()=>{
     
     cardHeadersBG[0].classList.toggle('display-none')
+    createLevelCards();
 })
+
+
 
 

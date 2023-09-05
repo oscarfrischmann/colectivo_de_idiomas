@@ -49,7 +49,10 @@
   text-transform: uppercase;
 }
 .courses__description--tittle h2 {
-  color: #3d3d3d;
+  color: #E2318A;
+}
+.courses__description--tittle img {
+  width: 150px;
 }
 .courses__description--card {
   display: flex;
@@ -88,6 +91,9 @@
   box-shadow: 1px 1px 1px;
 }
 
+.card0,
+.card1,
+.card2,
 .card {
   max-width: 400px;
   width: 335px;
@@ -102,10 +108,16 @@
   grid-template-areas: "tittle tittle tittle names names names" "specs specs specs specs imgBtn imgBtn" "specs specs specs specs imgBtn imgBtn";
   background-image: linear-gradient(180deg, #40B9B9 0% 38%, transparent 38% 100%);
 }
+.card0__tittle,
+.card1__tittle,
+.card2__tittle,
 .card__tittle {
   grid-area: tittle;
   padding-right: 1em;
 }
+.card0__tittle--one,
+.card1__tittle--one,
+.card2__tittle--one,
 .card__tittle--one {
   font-size: 2rem;
   color: #E2318A;
@@ -113,22 +125,37 @@
   text-transform: uppercase;
   text-align: end;
 }
+.card0__tittle--two,
+.card1__tittle--two,
+.card2__tittle--two,
 .card__tittle--two {
   font-size: 1rem;
   font-family: "Roboto thin";
   text-transform: uppercase;
   text-align: end;
 }
+.card0__type,
+.card1__type,
+.card2__type,
 .card__type {
   grid-area: tittle;
 }
+.card0__course-names,
+.card1__course-names,
+.card2__course-names,
 .card__course-names {
   grid-area: names;
   position: relative;
 }
+.card0__course-names img,
+.card1__course-names img,
+.card2__course-names img,
 .card__course-names img {
   width: 146px;
 }
+.card0__course-names span,
+.card1__course-names span,
+.card2__course-names span,
 .card__course-names span {
   position: absolute;
   top: 23%;
@@ -136,11 +163,17 @@
   font-size: 1.4rem;
   text-transform: uppercase;
 }
+.card0 ul,
+.card1 ul,
+.card2 ul,
 .card ul {
   width: 250px;
   grid-area: specs;
   padding: 20px 35px;
 }
+.card0__img-btn,
+.card1__img-btn,
+.card2__img-btn,
 .card__img-btn {
   display: flex;
   flex-direction: column;
@@ -149,14 +182,48 @@
   gap: 0;
   grid-area: imgBtn;
 }
+.card0__img-btn img,
+.card1__img-btn img,
+.card2__img-btn img,
 .card__img-btn img {
   width: 70px;
   place-self: flex-start;
 }
+.card0__img-btn button,
+.card1__img-btn button,
+.card2__img-btn button,
 .card__img-btn button {
   place-self: end;
   margin-top: -5px;
   margin-right: 33px;
+}
+
+.display-none {
+  display: none;
+}
+
+@keyframes opacity1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes opacity0 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.opacity1 {
+  animation: opacity1 1010ms ease-in-out;
+}
+
+.opacity0 {
+  animation: opacity0 1s ease-in-out;
 }
 
 .courses__card-container {

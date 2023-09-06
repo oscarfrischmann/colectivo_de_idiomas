@@ -55,9 +55,7 @@ coursesArr.forEach((e, i) => {
 
     // cardContainer.appendChild(card);
     const div = document.querySelectorAll('.courses__description--card');
-    console.log(div)
     div[i].insertAdjacentElement('beforebegin', card);
-    // coursesCardContainer.insertAdjacentElement('beforebegin', card);
     card.appendChild(cardTittle);
     cardTittle.appendChild(cardTittleOne).innerHTML = e.tittle;
     cardTittle.appendChild(cardTittleTwo).innerHTML = e.level;
@@ -67,7 +65,6 @@ coursesArr.forEach((e, i) => {
     card.appendChild(courseDescriptionUList);
     e.description.forEach((el) => {
         const courseDescriptionItem = document.createElement('li');
-
         courseDescriptionUList.appendChild(courseDescriptionItem).innerHTML = el;
     });
 
@@ -77,18 +74,6 @@ coursesArr.forEach((e, i) => {
     cardButton.setAttribute('id', `courseBtn${i}`);
 });
 
-// btn0.addEventListener('click', () => {
-//     const card0 = document.getElementsByClassName('card0');
-//     card0[0].classList.add('opacity1');
-//     setTimeout(() => card0[0].classList.add('display-none'), 1000);
-//     const descriprionCardA = document.getElementById('descriptionCardA')
-//     setTimeout(() => {
-//         descriprionCardA.classList.remove('display-none');
-//         descriprionCardA.classList.add('opacity0');
-
-
-//     }, 1000);
-// })
 const btn0 = document.getElementById('courseBtn0');
 const btn1 = document.getElementById('courseBtn1');
 const btn2 = document.getElementById('courseBtn2');
@@ -101,7 +86,6 @@ function showCourseDescription(index, descriptionCard) {
     setTimeout(() => {
         descriprionCardA.classList.remove('display-none');
         descriprionCardA.classList.add('opacity0');
-
     }, 1000);
 }
 
@@ -134,8 +118,12 @@ showPriceBtn.forEach((e, i) => {
                 <p id="long${i}"><span>${long}</span>hs por semana: <span>${monthPriceLong}</span></p>
                 <button id="showDiscountLong${i}">%</button>
             </div>
+            <div class="checkbox">
+                <span class="checkbox__span">Ver precio en USD</span>
+                <input type="checkbox" id="showUsdPrices${i}">
+            </div>
             <div class="btn-container">
-                <button class="btn">Cerrar</button>
+                <button class="btn">Home</button>
                 <button class="btn">Escribinos</button>
             </div>
         </div>
@@ -146,26 +134,45 @@ showPriceBtn.forEach((e, i) => {
         const longCourse = document.getElementById(`long${i}`);
         const showDiscountLong = document.getElementById(`showDiscountLong${i}`);
         const showDiscountShort = document.getElementById(`showDiscountShort${i}`);
+        const showUsdPrices = document.getElementById(`showUsdPrices${i}`);
+        const btn = document.querySelectorAll('.btn-container .btn');
+        console.log(btn)
+        btn[0].addEventListener('click', ()=> window.location.href = '../index.html')
+        btn[1].addEventListener('click', ()=> window.open(' https://wa.me/5491132850921', '_blank'));
 
-        function changePrices() {
-            let monthPriceShort = '31000';
-            let monthPriceLong = '37000';
-            paragraph.textContent = 'Este precio es para los que pagan el cuatrimestre completo.';
-            shortCourse.innerHTML = `<span>${short}</span>hs por semana: <span>${monthPriceShort}</span>`;
-            longCourse.innerHTML = `<span>${long}</span>hs por semana: <span>${monthPriceLong}</span>`;
+        const changePrices = function (monthly, quarterly, paragraphContent) {
+            // let monthPriceShort = '31000';
+            // let monthPriceLong = '37000';
+            paragraph.textContent = paragraphContent;
+            shortCourse.innerHTML = `<span>${short}</span>hs por semana: <span>${monthly}</span>`;
+            longCourse.innerHTML = `<span>${long}</span>hs por semana: <span>${quarterly}</span>`;
+            return true;
         }
         showDiscountShort.addEventListener('click', () => {
-            changePrices();
+            if (!showUsdPrices.checked) {
+                changePrices(31000, 37000, 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.');
+            } else {
+                changePrices(110, 150, 'Estoy son dolers para el pago por cuatrimestre.')
+            }
         })
+
         showDiscountLong.addEventListener('click', () => {
-            changePrices();
+            if (!showUsdPrices.checked) {
+                changePrices(31000, 37000, 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.');
+            } else {
+                changePrices(110, 150, 'Estoy son dolers para el pago por cuatrimestre.')
+            }
         })
+        showUsdPrices.addEventListener('click', () => {
+            if (showUsdPrices.checked) {
+                console.log('checked');
+                changePrices(35, 45, 'Este precio es en dolares estadounidenses y pago menusal')
+            } else {
+                console.log('not checked');
+                changePrices(8000, 9500, 'Todos los cursos de Inglés general duran 4 meses con los siguientes precios por mes expresados en pesos argentinos.')
+            }
+        });
     });
 });
 
 
-
-
-
-// console.log(showDiscount)
-// console.log(showDiscount2)

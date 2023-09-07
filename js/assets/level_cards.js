@@ -137,8 +137,8 @@ showPriceBtn.forEach((e, i) => {
         const showUsdPrices = document.getElementById(`showUsdPrices${i}`);
         const btn = document.querySelectorAll('.btn-container .btn');
         console.log(btn)
-        btn[0].addEventListener('click', ()=> window.location.href = '../index.html')
-        btn[1].addEventListener('click', ()=> window.open(' https://wa.me/5491132850921', '_blank'));
+        btn[0].addEventListener('click', () => window.location.href = '../index.html')
+        btn[1].addEventListener('click', () => window.open(' https://wa.me/5491132850921?text=Hola!%20Quisiera%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20ingles.', '_blank'));
 
         const changePrices = function (monthly, quarterly, paragraphContent) {
             // let monthPriceShort = '31000';
@@ -149,18 +149,27 @@ showPriceBtn.forEach((e, i) => {
             return true;
         }
         showDiscountShort.addEventListener('click', () => {
-            if (!showUsdPrices.checked) {
+            if (!showUsdPrices.checked && paragraph.textContent !== 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.') {
                 changePrices(31000, 37000, 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.');
+            } else if (!showUsdPrices.checked && paragraph.textContent === 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.') {
+                changePrices(8000, 9500, 'Todos los cursos de Inglés general duran 4 meses con los siguientes precios por mes expresados en pesos argentinos.')
+            } else if (showUsdPrices.checked && paragraph.textContent !== 'Estos son los precios en dolares para quien quiera pagar por cuatrimestre.') {
+                changePrices(110, 150, 'Estos son los precios en dolares para quien quiera pagar por cuatrimestre.')
             } else {
-                changePrices(110, 150, 'Estoy son dolers para el pago por cuatrimestre.')
+                changePrices(35, 45, 'Este precio es en dolares estadounidenses y pago menusal')
             }
         })
 
         showDiscountLong.addEventListener('click', () => {
-            if (!showUsdPrices.checked) {
+            if (!showUsdPrices.checked && paragraph.textContent !== 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.') {
                 changePrices(31000, 37000, 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.');
+            } else if (!showUsdPrices.checked && paragraph.textContent === 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.') {
+                changePrices(8000, 9500, 'Todos los cursos de Inglés general duran 4 meses con los siguientes precios por mes expresados en pesos argentinos.')
+            } else if (showUsdPrices.checked && paragraph.textContent !== 'Estos son los precios en dolares para quien quiera pagar por cuatrimestre.') {
+                changePrices(110, 150, 'Estos son los precios en dolares para quien quiera pagar por cuatrimestre.')
             } else {
-                changePrices(110, 150, 'Estoy son dolers para el pago por cuatrimestre.')
+                changePrices(35, 45, 'Este precio es en dolares estadounidenses y pago menusal')
+
             }
         })
         showUsdPrices.addEventListener('click', () => {

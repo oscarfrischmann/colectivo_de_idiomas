@@ -13,10 +13,9 @@ const courses = [];
 courses.push(new Course('cursos', 'de inglés general', './img/colectivo-amarillo.png', 'Están divididos en niveles desde Elemental hasta Avanzado, homologados con el MCER. Cada nivel se completa al finalizar dos cuatrimestres de estudio.', 'ver más'));
 courses.push(new Course('cambridge', 'preparación de exámenes', './img/cambridge.png', 'En estos cursos brindamos todas las herramientas necesarias para poder rendir los exámenes internacionales de Cambridge, FIRST y AVANCED. La preparación se completa al cabo de dos cuatrimestres de estudio. Es necesaria una evaluación de nivel previa.', 'ver más'));
 courses.push(new Course('talleres', 'de conversación', './img/talking-color.png', 'Si estás buscando hablar con más fluidez, incorporar más vocabulario y poder practicar conversación en grupos reducidos, este espacio es para vos. A partir de nivel pre-intermedio hasta avanzado.', 'ver más'));
-courses.push(new Course('seminarios', 'temáticos', './img/four-faces-color.png', 'Si tenés un nivel de inglés intermedio o superior, podés participar de nuestros seminarios temáticos donde vas a poder usar el idioma para aprender sobre distintos temas. Algunas de nuestras propuestas son: inglés para viajes, inglés para el trabajo, astrología en inglés y amantes del cine.', 'ver más'));
+courses.push(new Course('seminarios', 'temáticos', './img/avatar_ECDI_negativo_05.png', 'Si tenés un nivel de inglés intermedio o superior, podés participar de nuestros seminarios temáticos donde vas a poder usar el idioma para aprender sobre distintos temas. Algunas de nuestras propuestas son: inglés para viajes, inglés para el trabajo, astrología en inglés y amantes del cine.', 'ver más'));
 courses.push(new Course('clases', 'individuales', './img/laptop-verde.png', '¿Necesitás acomodar las clases a tus horarios? ¿Necesitás inglés con fines específicos? ¡Este es el espacio para vos!', 'ver más'));
 
-console.log(courses);
 const tag = ['h4', 'img', 'h5', 'p', 'button']
 const cardClasses = {
     container: 'courses__card-container',

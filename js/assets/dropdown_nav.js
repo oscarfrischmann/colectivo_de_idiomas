@@ -1,2 +1,2 @@
-const navMenu = ['home', 'quienes somos', 'cursos', 'precios', 'freebies'];
+const navMenu = ['home', 'quienes somos', 'cursos', 'precios', 'freebies', 'enlaces'];
 

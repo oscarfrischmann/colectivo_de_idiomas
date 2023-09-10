@@ -96,14 +96,108 @@ btn2.addEventListener('click', () => showCourseDescription('2', 'descriptionCard
 const showPriceBtn = document.querySelectorAll('.courses__description--card .btn');
 const hideDescriptionCard = document.querySelectorAll('.courses__description--card');
 
-const short = '1.15';
+// const short = '1.15';
+// const long = '1.30';
+// let monthPriceShort = '8000';
+// let monthPriceLong = '9500';
+
+// showPriceBtn.forEach((e, i) => {
+//     showPriceBtn[i].addEventListener('click', () => {
+//         monthPriceShort = '8000';
+//         monthPriceLong = '9500';
+//         hideDescriptionCard[i].innerHTML = `
+//         <div class="opacity0 courses__description--price">
+//             <h2>Cursos<br><span>de inglés general</span></h2>
+//             <img src="../img/colectivo-amarillo.png">
+//             <p class="paragraph" id="paragraph${i}">Todos los cursos de Inglés general duran 4 meses con los siguientes precios por mes expresados en pesos argentinos.</p>
+//             <div class="price-container display-none">
+//                 <p id="short${i}"><span>${short}hs </span>por semana: <span>${monthPriceShort}</span></p>
+//                 <button id="showDiscountShort${i}">%</button>
+//             </div>
+//                 <div class="price-container">
+//                 <p id="long${i}"><span>${long}</span>hs por semana: <span>${monthPriceLong}</span></p>
+//                 <button id="showDiscountLong${i}">%</button>
+//             </div>
+//             <div class="checkbox">
+//                 <span class="checkbox__span">Ver precio en USD</span>
+//                 <input type="checkbox" id="showUsdPrices${i}">
+//             </div>
+//             <div class="btn-container">
+//                 <button class="btn">Home</button>
+//                 <button class="btn">Escribinos</button>
+//             </div>
+//         </div>
+//             `;
+//         console.log(i);
+//         const paragraph = document.getElementById(`paragraph${i}`);
+//         const shortCourse = document.getElementById(`short${i}`);
+//         const longCourse = document.getElementById(`long${i}`);
+//         const showDiscountLong = document.getElementById(`showDiscountLong${i}`);
+//         const showDiscountShort = document.getElementById(`showDiscountShort${i}`);
+//         const showUsdPrices = document.getElementById(`showUsdPrices${i}`);
+//         const btn = document.querySelectorAll('.btn-container .btn');
+
+//         btn.forEach((e, i) => {
+//             if (i % 2 === 0) {
+//                 btn[i].addEventListener('click', () => window.location.href = '../index.html')
+//             } else {
+//                 btn[i].addEventListener('click', () => window.open(' https://wa.me/5491132850921?text=Hola!%20Quisiera%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20ingles.', '_blank'));
+//             }
+//         })
+
+
+
+//         const changePrices = function (monthly, quarterly, paragraphContent) {
+//             // let monthPriceShort = '31000';
+//             // let monthPriceLong = '37000';
+//             paragraph.textContent = paragraphContent;
+//             shortCourse.innerHTML = `<span>${short}</span>hs por semana: <span>${monthly}</span>`;
+//             longCourse.innerHTML = `<span>${long}</span>hs por semana: <span>${quarterly}</span>`;
+//             return true;
+//         }
+//         showDiscountShort.addEventListener('click', () => {
+//             if (!showUsdPrices.checked && paragraph.textContent !== 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.') {
+//                 changePrices(31000, 37000, 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.');
+//             } else if (!showUsdPrices.checked && paragraph.textContent === 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.') {
+//                 changePrices(8000, 9500, 'Todos los cursos de Inglés general duran 4 meses con los siguientes precios por mes expresados en pesos argentinos.')
+//             } else if (showUsdPrices.checked && paragraph.textContent !== 'Estos son los precios en dolares para quien quiera pagar por cuatrimestre.') {
+//                 changePrices(110, 150, 'Estos son los precios en dolares para quien quiera pagar por cuatrimestre.')
+//             } else {
+//                 changePrices(35, 45, 'Este precio es en dolares estadounidenses y pago menusal')
+//             }
+//         })
+
+//         showDiscountLong.addEventListener('click', () => {
+//             if (!showUsdPrices.checked && paragraph.textContent !== 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.') {
+//                 changePrices(31000, 37000, 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.');
+//             } else if (!showUsdPrices.checked && paragraph.textContent === 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.') {
+//                 changePrices(8000, 9500, 'Todos los cursos de Inglés general duran 4 meses con los siguientes precios por mes expresados en pesos argentinos.')
+//             } else if (showUsdPrices.checked && paragraph.textContent !== 'Estos son los precios en dolares para quien quiera pagar por cuatrimestre.') {
+//                 changePrices(110, 150, 'Estos son los precios en dolares para quien quiera pagar por cuatrimestre.')
+//             } else {
+//                 changePrices(35, 45, 'Este precio es en dolares estadounidenses y pago menusal')
+
+//             }
+//         })
+//         showUsdPrices.addEventListener('click', () => {
+//             if (showUsdPrices.checked) {
+//                 console.log('checked');
+//                 changePrices(35, 45, 'Este precio es en dolares estadounidenses y pago menusal')
+//             } else {
+//                 console.log('not checked');
+//                 changePrices(8000, 9500, 'Todos los cursos de Inglés general duran 4 meses con los siguientes precios por mes expresados en pesos argentinos.')
+//             }
+//         });
+//     });
+// });
+// const short = '1.15';
 const long = '1.30';
-let monthPriceShort = '8000';
+// let monthPriceShort = '8000';
 let monthPriceLong = '9500';
 
 showPriceBtn.forEach((e, i) => {
     showPriceBtn[i].addEventListener('click', () => {
-        monthPriceShort = '8000';
+        // monthPriceShort = '8000';
         monthPriceLong = '9500';
         hideDescriptionCard[i].innerHTML = `
         <div class="opacity0 courses__description--price">
@@ -111,10 +205,6 @@ showPriceBtn.forEach((e, i) => {
             <img src="../img/colectivo-amarillo.png">
             <p class="paragraph" id="paragraph${i}">Todos los cursos de Inglés general duran 4 meses con los siguientes precios por mes expresados en pesos argentinos.</p>
             <div class="price-container">
-                <p id="short${i}"><span>${short}hs </span>por semana: <span>${monthPriceShort}</span></p>
-                <button id="showDiscountShort${i}">%</button>
-                </div>
-                <div class="price-container">
                 <p id="long${i}"><span>${long}</span>hs por semana: <span>${monthPriceLong}</span></p>
                 <button id="showDiscountLong${i}">%</button>
             </div>
@@ -130,35 +220,42 @@ showPriceBtn.forEach((e, i) => {
             `;
         console.log(i);
         const paragraph = document.getElementById(`paragraph${i}`);
-        const shortCourse = document.getElementById(`short${i}`);
+        // const shortCourse = document.getElementById(`short${i}`);
         const longCourse = document.getElementById(`long${i}`);
         const showDiscountLong = document.getElementById(`showDiscountLong${i}`);
-        const showDiscountShort = document.getElementById(`showDiscountShort${i}`);
+        // const showDiscountShort = document.getElementById(`showDiscountShort${i}`);
         const showUsdPrices = document.getElementById(`showUsdPrices${i}`);
         const btn = document.querySelectorAll('.btn-container .btn');
-        console.log(btn)
-        btn[0].addEventListener('click', () => window.location.href = '../index.html')
-        btn[1].addEventListener('click', () => window.open(' https://wa.me/5491132850921?text=Hola!%20Quisiera%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20ingles.', '_blank'));
+
+        btn.forEach((e, i) => {
+            if (i % 2 === 0) {
+                btn[i].addEventListener('click', () => window.location.href = '../index.html')
+            } else {
+                btn[i].addEventListener('click', () => window.open(' https://wa.me/5491132850921?text=Hola!%20Quisiera%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20ingles.', '_blank'));
+            }
+        })
+
+
 
         const changePrices = function (monthly, quarterly, paragraphContent) {
             // let monthPriceShort = '31000';
             // let monthPriceLong = '37000';
             paragraph.textContent = paragraphContent;
-            shortCourse.innerHTML = `<span>${short}</span>hs por semana: <span>${monthly}</span>`;
+            // shortCourse.innerHTML = `<span>${short}</span>hs por semana: <span>${monthly}</span>`;
             longCourse.innerHTML = `<span>${long}</span>hs por semana: <span>${quarterly}</span>`;
             return true;
         }
-        showDiscountShort.addEventListener('click', () => {
-            if (!showUsdPrices.checked && paragraph.textContent !== 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.') {
-                changePrices(31000, 37000, 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.');
-            } else if (!showUsdPrices.checked && paragraph.textContent === 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.') {
-                changePrices(8000, 9500, 'Todos los cursos de Inglés general duran 4 meses con los siguientes precios por mes expresados en pesos argentinos.')
-            } else if (showUsdPrices.checked && paragraph.textContent !== 'Estos son los precios en dolares para quien quiera pagar por cuatrimestre.') {
-                changePrices(110, 150, 'Estos son los precios en dolares para quien quiera pagar por cuatrimestre.')
-            } else {
-                changePrices(35, 45, 'Este precio es en dolares estadounidenses y pago menusal')
-            }
-        })
+        // showDiscountShort.addEventListener('click', () => {
+        //     if (!showUsdPrices.checked && paragraph.textContent !== 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.') {
+        //         changePrices(31000, 37000, 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.');
+        //     } else if (!showUsdPrices.checked && paragraph.textContent === 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.') {
+        //         changePrices(8000, 9500, 'Todos los cursos de Inglés general duran 4 meses con los siguientes precios por mes expresados en pesos argentinos.')
+        //     } else if (showUsdPrices.checked && paragraph.textContent !== 'Estos son los precios en dolares para quien quiera pagar por cuatrimestre.') {
+        //         changePrices(110, 150, 'Estos son los precios en dolares para quien quiera pagar por cuatrimestre.')
+        //     } else {
+        //         changePrices(35, 45, 'Este precio es en dolares estadounidenses y pago menusal')
+        //     }
+        // })
 
         showDiscountLong.addEventListener('click', () => {
             if (!showUsdPrices.checked && paragraph.textContent !== 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.') {

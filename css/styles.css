@@ -66,17 +66,17 @@
   height: 450px;
   margin: 15px auto;
   border-radius: 30px;
+  align-content: center;
 }
 .courses__description--list {
   font-family: "segoe";
   width: 80%;
 }
 .courses__description--price {
-  display: flex;
-  flex-direction: column;
-  justify-content: top;
-  align-items: center;
-  gap: 10px;
+  display: grid;
+  grid-template-rows: 100px 50px 100px 52px 20px 45px;
+  justify-items: center;
+  row-gap: 10px;
   margin-top: -60px;
 }
 .courses__description--price h2 {
@@ -150,7 +150,7 @@
   text-transform: capitalize;
   color: #706F6F;
   font-size: 0.8rem;
-  font-family: "roboto bold";
+  font-family: "roboto medium";
   text-align: center;
   margin: 1rem 4rem;
   cursor: pointer;
@@ -308,14 +308,14 @@
 .courses__card-header {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(2, 40px);
+  grid-template-rows: repeat(2, 50px);
 }
 .courses img {
   grid-row: -3/-1;
   grid-column: 2/3;
   width: 90px;
-  padding: 10px;
   justify-self: center;
+  align-self: center;
 }
 .courses h4 {
   font-family: "Roboto bold";
@@ -349,6 +349,10 @@
 #div1 h5,
 #div4 h5 {
   color: #E2318A;
+}
+
+#div1 img {
+  padding: 10px;
 }
 
 #div2 img {

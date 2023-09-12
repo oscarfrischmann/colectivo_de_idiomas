@@ -15,12 +15,9 @@ navMenu.forEach((e, i) => {
     a.textContent = e;
     ul.appendChild(li)
     a.setAttribute('href', navLinks[i])
-
+    if (a.textContent === 'cursos') {
+        a.setAttribute('id', 'coursesDropdown')
+    }
 })
 
-if (document.getElementById('coursesPage')) {
-    console.log('Yes')
-
-} else {
-    console.log('no')
-}
+const coursesDropdown = document.getElementById('coursesDropdown');

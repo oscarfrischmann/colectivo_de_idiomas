@@ -51,9 +51,12 @@
   transition: transform 1s ease-in-out;
 }
 .dropdown__list {
-  margin: 130px 20px;
+  margin: 135px 20px;
   list-style: none;
   font-size: 2rem;
+  display: grid;
+  grid-template-rows: repeat(6, 40px);
+  align-items: center;
 }
 .dropdown__list li {
   margin: 5px 0;
@@ -64,9 +67,12 @@
   font-family: "segoe", sans-serif;
   text-transform: capitalize;
   white-space: nowrap;
+  transition: all 0.3s ease-in-out;
 }
-.dropdown__list li a span:hover {
+.dropdown__list li a:hover {
+  font-size: 1.1em;
   color: #E2318A;
+  transition: all 0.3s ease-in-out;
 }
 
 .dropdown__active {

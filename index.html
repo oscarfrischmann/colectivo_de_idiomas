@@ -14,13 +14,13 @@
 <body>
     <header>
         <nav>
-            <i class="fas fa-solid fa-bars dropdown-icon"></i>
-            <div class="dropdown">
-                <ul class="dropdown__list"></ul>
-            </div>
+            <i class="fas fa-solid fa-bars dropdown-icon" id="dropdownIcon"></i>
             <img class="logo" src="img/Logo_ECDI-transparente-03-solo-nombre.png" alt="">
             <h1 class="clipped">El colectivo de Idiomas</h1>
         </nav>
+        <div class="dropdown" id="dropdownContainer">
+            <ul class="dropdown__list"></ul>
+        </div>
     </header>
     <main>
         <section class="tittle">
@@ -39,12 +39,12 @@
         </section>
         <section class="courses">
             <article class="courses__cards" id="coursesCardContainer">
-                
+
             </article>
             <article class="courses__levels" id="cardContainer"></article>
 
         </section>
-        <section class="learn" >
+        <section class="learn">
             <img class="learn__bg" src="./img/violeta.png" alt="" id="learnSection">
             <article>
                 <div class="learn__tittles">
@@ -64,7 +64,7 @@
                 </p>
             </article>
         </section>
-        <section class="about-us">
+        <section class="about-us" id="aboutUs">
             <h2>¿Quiénes somos?</h2>
             <img class="about-us__bg" src="./img/amarillo_top.png" alt="">
             <arcticle class="about-us__luana">
@@ -136,7 +136,7 @@
             <p> frontend</p>
         </div>
     </footer>
-
+    <script src="./js/assets/dropdown_nav.js"></script>
     <script src="./js/assets/courses.js"></script>
     <script src="./js/main.js"></script>
 </body>

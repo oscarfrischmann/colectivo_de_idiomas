@@ -22,6 +22,7 @@ const cardClasses = {
     header: 'courses__card-header'
 }
 
+
 const coursesCardContainer = document.getElementById('coursesCardContainer');
 
 courses.forEach((course, i) => {
@@ -60,20 +61,16 @@ courses.forEach((course, i) => {
 })
 
 const cardHeadersBG = document.getElementsByClassName('courses__card-container');
+const cardHeadersBGColors = ['40B9B9','FBE800','E2318A', '40B9B9', 'FBE800'];
 
-cardHeadersBG[0].style.backgroundImage = 'linear-gradient(180deg, #40B9B9 0% 25%, transparent 25% 100% )'
-cardHeadersBG[1].style.backgroundImage = 'linear-gradient(180deg, #FBE800 0% 25%, transparent 25% 100% )'
-cardHeadersBG[2].style.backgroundImage = 'linear-gradient(180deg, #E2318A 0% 25%, transparent 25% 100% )'
-cardHeadersBG[3].style.backgroundImage = 'linear-gradient(180deg, #40B9B9 0% 25%, transparent 25% 100% )'
-cardHeadersBG[4].style.backgroundImage = 'linear-gradient(180deg, #FBE800 0% 25%, transparent 25% 100% )'
-
+for (let i = 0; i < cardHeadersBGColors.length; i++ ) {
+    cardHeadersBG[i].style.backgroundImage = `linear-gradient(180deg, #${cardHeadersBGColors[i]} 0% 25%, transparent 25% 100% )`
+}
 
 const levelCourses = document.querySelector('.courses__card-container .btn');
 
 levelCourses.addEventListener("click", ()=>{
-    
     window.location.href ="./pages/level-courses.html"
-    
 })
 
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,70 +10,72 @@
     <link rel="stylesheet" href="../css/styles.css">
     <title>Cursos de inglés general || El colectivo de idiomas</title>
 </head>
+
 <body>
     <header>
         <nav>
-            <i class="fas fa-solid fa-bars dropdown-icon"></i>
-            <div>
-                <ul class="dropdown__menu"></ul>
-            </div>
+            <i class="fas fa-solid fa-bars dropdown-icon" id="dropdownIcon"></i>
             <img class="logo" src="../img/Logo_ECDI-transparente-03-solo-nombre.png" alt="">
             <h1 class="clipped">El colectivo de Idiomas</h1>
         </nav>
+        <div class="dropdown" id="dropdownContainer">
+            <ul class="dropdown__list"></ul>
+        </div>
     </header>
-    <main>
+    <main id="coursesPage">
         <article class="courses__description " id="coursesCardDescription">
-                    <div class="courses__description--card display-none" id="descriptionCardA">
-                        <div class="courses__description--tittle">
-                            <h2>a1/a2</h2>
-                            <img src="../img/laptop-verde.png" alt="">
-                        </div>
-                        <ul class="courses__description--list">
-                            <li>Duración: 4 meses.</li>
-                            <li>Carga horaria: clases de 1:30 o 1:15hs por semana.</li>
-                            <li>Modalidad: ONLINE via Zoom</li>
-                            <li>Material de estudio en Google Classroom.</li>
-                            <li>Acceso: las clases quedan grabadas para su posterior visualización en caso de ausencia.</li>
-                            <li></li>
-                        </ul>
-                        <button class="btn">precios</button>
-                    </div>
-                    <div class="courses__description--card display-none" id="descriptionCardB">
-                        <div class="courses__description--tittle">
-                            <h2></h2>
-                            <img src="../img/laptop-verde.png" alt="">
-                        </div>
-                        <ul class="courses__description--list">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <button class="btn">precios</button>
-                    </div>
-                    <div class="courses__description--card display-none" id="descriptionCardC">
-                        <div class="courses__description--tittle">
-                            <h2></h2>
-                            <img src="../img/laptop-verde.png" alt="">
-                        </div>
-                        <ul class="courses__description--list">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <button class="btn">precios</button>
-                    </div>
-                </article>
+            <div class="courses__description--card display-none" id="descriptionCardA">
+                <div class="courses__description--tittle">
+                    <h2>a1/a2</h2>
+                    <img src="../img/laptop-verde.png" alt="">
+                </div>
+                <ul class="courses__description--list">
+                    <li>Duración: 4 meses.</li>
+                    <li>Carga horaria: clases de 1:30 o 1:15hs por semana.</li>
+                    <li>Modalidad: ONLINE via Zoom</li>
+                    <li>Material de estudio en Google Classroom.</li>
+                    <li>Acceso: las clases quedan grabadas para su posterior visualización en caso de ausencia.</li>
+                    <li></li>
+                </ul>
+                <button class="btn">precios</button>
+            </div>
+            <div class="courses__description--card display-none" id="descriptionCardB">
+                <div class="courses__description--tittle">
+                    <h2></h2>
+                    <img src="../img/laptop-verde.png" alt="">
+                </div>
+                <ul class="courses__description--list">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <button class="btn">precios</button>
+            </div>
+            <div class="courses__description--card display-none" id="descriptionCardC">
+                <div class="courses__description--tittle">
+                    <h2></h2>
+                    <img src="../img/laptop-verde.png" alt="">
+                </div>
+                <ul class="courses__description--list">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <button class="btn">precios</button>
+            </div>
+        </article>
         <article class="courses__cards" id="coursesCardContainer"></article>
     </main>
-    
-    
+
+    <script src="../js/assets/dropdown_nav.js"></script>
     <script src="../js/assets/level_cards.js"></script>
     <script src="../js/main.js"></script>
 </body>
+
 </html>

@@ -3,6 +3,7 @@
   padding: 0px;
   color: #000000;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -36,6 +37,41 @@
 
 .display-none {
   display: none;
+}
+
+.dropdown {
+  width: 280px;
+  height: 615px;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 5px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  left: -285px;
+  transition: transform 1s ease-in-out;
+}
+.dropdown__list {
+  margin: 130px 20px;
+  list-style: none;
+  font-size: 2rem;
+}
+.dropdown__list li {
+  margin: 5px 0;
+}
+.dropdown__list li a {
+  color: #706F6F;
+  text-decoration: none;
+  font-family: "segoe", sans-serif;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+.dropdown__list li a span:hover {
+  color: #E2318A;
+}
+
+.dropdown__active {
+  transition: transform 1s ease-in;
+  transform: translateX(285px);
 }
 
 .courses__description--tittle {
@@ -440,6 +476,8 @@ nav {
   background-size: 100%;
   background-repeat: no-repeat;
   padding: 10px 20px;
+  z-index: 2;
+  position: relative;
 }
 
 .logo {

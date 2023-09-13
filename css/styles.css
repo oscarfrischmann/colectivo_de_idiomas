@@ -41,7 +41,7 @@
 
 .dropdown {
   width: 280px;
-  height: 615px;
+  height: fit-content;
   background-color: whitesmoke;
   box-shadow: 2px 2px 5px;
   position: absolute;
@@ -56,7 +56,7 @@
   font-size: 2rem;
   display: grid;
   grid-template-rows: repeat(6, 40px);
-  align-items: center;
+  align-items: start;
 }
 .dropdown__list li {
   margin: 5px 0;
@@ -69,15 +69,44 @@
   white-space: nowrap;
   transition: all 0.3s ease-in-out;
 }
-.dropdown__list li a:hover {
+.dropdown__list li a:hover, .dropdown__list li a:active {
   font-size: 1.1em;
   color: #E2318A;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .dropdown__active {
   transition: transform 1s ease-in;
   transform: translateX(285px);
+}
+
+.dropdown {
+  width: 280px;
+  height: fit-content;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 5px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  left: -285px;
+  transition: transform 1s ease-in-out;
+}
+.dropdown__list--more {
+  font-size: 0.9rem;
+  font-family: "segoe", sans-serif;
+  text-transform: capitalize;
+  list-style-type: none;
+  padding: 1px 30px;
+  white-space: nowrap;
+}
+.dropdown__list-open {
+  margin: 135px 20px;
+  list-style: none;
+  font-size: 2rem;
+  display: grid;
+  grid-template-rows: repeat(3, 40px) 120px repeat(3, 40px);
+  align-items: start;
+  transition: all 1s ease-in-out;
 }
 
 .courses__description--tittle {

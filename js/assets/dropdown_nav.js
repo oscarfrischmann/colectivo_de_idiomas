@@ -1,5 +1,6 @@
 const navMenu = ['home', 'quienes somos', 'cursos', 'precios', 'freebies', 'enlaces'];
-const navLinks = ['../index.html', '#aboutUs', '../index.html#coursesCardContainer']
+const moreCoursesDropdown = ['cursos de inglés general', 'preparación de exámenes', 'talleres de conversación', 'seminarios temáticos', 'clases individuales'];
+const navLinks = ['../index.html', '#aboutUs', undefined]
 const dropdownContainer = document.getElementById('dropdownContainer');
 const dropdownIcon = document.getElementById('dropdownIcon');
 
@@ -16,8 +17,34 @@ navMenu.forEach((e, i) => {
     ul.appendChild(li)
     a.setAttribute('href', navLinks[i])
     if (a.textContent === 'cursos') {
-        a.setAttribute('id', 'coursesDropdown')
+        li.setAttribute('id', 'coursesDropdown')
+        a.setAttribute('href', '#')
     }
 })
 
 const coursesDropdown = document.getElementById('coursesDropdown');
+coursesDropdown.addEventListener('click', () => {
+    const control = document.querySelectorAll('.dropdown__list--more')
+    if (control.length > 0) {
+        const ulToRemove = document.querySelector('.dropdown__list ul')
+        console.log(ulToRemove)
+        const dropdownList = document.querySelector('.dropdown__list')
+        dropdownList.removeChild(ulToRemove)
+        dropdownList.classList.add('dropdown__list')
+        dropdownList.classList.remove('dropdown__list-open')
+    } else {
+        const dropdownList = document.querySelector('.dropdown__list')
+        // dropdownList.classList.remove('dropdown__list')
+        dropdownList.classList.add('dropdown__list-open')
+        const moreCoursesUL = document.createElement('ul');
+        coursesDropdown.insertAdjacentElement('afterend', moreCoursesUL);
+        moreCoursesDropdown.forEach((e, i) => {
+            const moreCoursesItem = document.createElement('li');
+            console.log(e)
+            moreCoursesItem.textContent = e;
+            moreCoursesItem.setAttribute('href', `#div${i}`)
+            moreCoursesUL.appendChild(moreCoursesItem)
+            moreCoursesItem.classList.add('dropdown__list--more')
+        })
+    }
+})

@@ -11,7 +11,7 @@ class Course {
 const courses = [];
 
 courses.push(new Course('cursos', 'de inglés general', './img/colectivo-amarillo.png', 'Están divididos en niveles desde Elemental hasta Avanzado, homologados con el MCER. Cada nivel se completa al finalizar dos cuatrimestres de estudio.', 'ver más'));
-courses.push(new Course('cambridge', 'preparación de exámenes', './img/cambridge.png', 'En estos cursos brindamos todas las herramientas necesarias para poder rendir los exámenes internacionales de Cambridge, FIRST y AVANCED. La preparación se completa al cabo de dos cuatrimestres de estudio. Es necesaria una evaluación de nivel previa.', 'ver más'));
+courses.push(new Course('cambridge', 'preparación de exámenes internacionales', './img/cambridge.png', 'En estos cursos brindamos todas las herramientas necesarias para poder rendir los exámenes internacionales de Cambridge, FIRST y AVANCED. La preparación se completa al cabo de dos cuatrimestres de estudio. Es necesaria una evaluación de nivel previa.', 'ver más'));
 courses.push(new Course('talleres', 'de conversación', './img/talking-color.png', 'Si estás buscando hablar con más fluidez, incorporar más vocabulario y poder practicar conversación en grupos reducidos, este espacio es para vos. A partir de nivel pre-intermedio hasta avanzado.', 'ver más'));
 courses.push(new Course('seminarios', 'temáticos', './img/avatar_ECDI_negativo_05.png', 'Si tenés un nivel de inglés intermedio o superior, podés participar de nuestros seminarios temáticos donde vas a poder usar el idioma para aprender sobre distintos temas. Algunas de nuestras propuestas son: inglés para viajes, inglés para el trabajo, astrología en inglés y amantes del cine.', 'ver más'));
 courses.push(new Course('clases', 'individuales', './img/laptop-verde.png', '¿Necesitás acomodar las clases a tus horarios? ¿Necesitás inglés con fines específicos? ¡Este es el espacio para vos!', 'ver más'));
@@ -50,29 +50,33 @@ courses.forEach((course, i) => {
             const htmlTag = document.createElement(tag);
             card.appendChild(htmlTag)
             htmlTag.innerText = course.paragraph;
-        }else {
+        } else {
             const htmlTag = document.createElement(tag);
             card.appendChild(htmlTag)
             htmlTag.innerText = course.btnText;
             htmlTag.classList.add('btn')
+            htmlTag.setAttribute('id', `coursesBtn${i}`)
             htmlTag.style.marginLeft
         }
     })
 })
 
 const cardHeadersBG = document.getElementsByClassName('courses__card-container');
-const cardHeadersBGColors = ['40B9B9','FBE800','E2318A', '40B9B9', 'FBE800'];
+const cardHeadersBGColors = ['40B9B9', 'FBE800', 'E2318A', '40B9B9', 'FBE800'];
 
-for (let i = 0; i < cardHeadersBGColors.length; i++ ) {
+for (let i = 0; i < cardHeadersBGColors.length; i++) {
     cardHeadersBG[i].style.backgroundImage = `linear-gradient(180deg, #${cardHeadersBGColors[i]} 0% 25%, transparent 25% 100% )`
 }
 
-const levelCourses = document.querySelector('.courses__card-container .btn');
-
-levelCourses.addEventListener("click", ()=>{
-    window.location.href ="./pages/level-courses.html"
+const levelCourses = document.getElementById('coursesBtn0');
+levelCourses.addEventListener("click", () => {
+    window.location.href = "./pages/cursos-ingles-general.html"
 })
 
+const cambridgeBtn = document.getElementById('coursesBtn1')
+cambridgeBtn.addEventListener('click', () => {
+    window.location.href = "./pages/preparacion-examenes-internacionales.html"
+})
 
 
 

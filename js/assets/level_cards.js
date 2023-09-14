@@ -1,7 +1,7 @@
 const coursesArr = [];
-const descriptionsBeguiner = ['Aprendé Inglés desde cero.', 'Hablá desde el primer dia.', 'Grupos reducidos.'];
-const descriptionsInter = ['Mejorá tu nivel de inglés.', 'Hablá desde el primer dia.', 'Grupos reducidos.'];
-// const descriptionsAdv = ['Aprendé Inglés desde cero.', 'Hablá desde el primer dia.', 'Grupos reducidos.'];
+const descriptionsBeguiner = ['Aprendé Inglés desde cero.', 'Hablá desde el primer dia.', 'Grupos reducidos.', 'Material de estudio y práctica incluido.'];
+const descriptionsInter = ['Mejorá tu nivel de inglés.', 'Foco en la comunicación.', 'Grupos reducidos.', 'Material de estudio y práctica incluido.'];
+const descriptionsAdv = ['Perfeccioná tu inglés.', 'Desarrollá habilidades profesionales de conversación.', 'Grupos reducidos.', 'Material de estudio y práctica incluido.'];
 
 class Level {
     constructor(tittle, level, names, description) {
@@ -14,7 +14,7 @@ class Level {
 
 coursesArr.push(new Level('nivel', 'principiante', 'a1/a2', descriptionsBeguiner));
 coursesArr.push(new Level('nivel', 'intermedio', 'b1/b2', descriptionsInter));
-coursesArr.push(new Level('nivel', 'avanzado', 'c1/c2', descriptionsInter));
+coursesArr.push(new Level('nivel', 'avanzado', 'c1/c2', descriptionsAdv));
 
 console.log(coursesArr)
 
@@ -193,12 +193,12 @@ const hideDescriptionCard = document.querySelectorAll('.courses__description--ca
 // const short = '1.15';
 const long = '1.30';
 // let monthPriceShort = '8000';
-let monthPriceLong = '9500';
+let monthPriceLong = '11400';
 
 showPriceBtn.forEach((e, i) => {
     showPriceBtn[i].addEventListener('click', () => {
         // monthPriceShort = '8000';
-        monthPriceLong = '9500';
+        monthPriceLong = '11400';
         hideDescriptionCard[i].innerHTML = `
         <div class="opacity0 courses__description--price">
             <h2>Cursos<br><span>de inglés general</span></h2>
@@ -259,9 +259,9 @@ showPriceBtn.forEach((e, i) => {
 
         showDiscountLong.addEventListener('click', () => {
             if (!showUsdPrices.checked && paragraph.textContent !== 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.') {
-                changePrices(31000, 37000, 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.');
+                changePrices(31000, 46000, 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.');
             } else if (!showUsdPrices.checked && paragraph.textContent === 'Este precio es para los que pagan el cuatrimestre completo en pesos argentinos.') {
-                changePrices(8000, 9500, 'Todos los cursos de Inglés general duran 4 meses con los siguientes precios por mes expresados en pesos argentinos.')
+                changePrices(8000, 11400, 'Todos los cursos de Inglés general duran 4 meses con los siguientes precios por mes expresados en pesos argentinos.')
             } else if (showUsdPrices.checked && paragraph.textContent !== 'Estos son los precios en dolares para quien quiera pagar por cuatrimestre.') {
                 changePrices(110, 150, 'Estos son los precios en dolares para quien quiera pagar por cuatrimestre.')
             } else {

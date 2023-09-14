@@ -1,6 +1,6 @@
 const navMenu = ['home', 'quienes somos', 'cursos', 'precios', 'freebies', 'enlaces'];
 const moreCoursesDropdown = ['cursos de inglés general', 'preparación de exámenes', 'talleres de conversación', 'seminarios temáticos', 'clases individuales'];
-const navLinks = ['../index.html', '#aboutUs', undefined]
+const navLinks = ['../index.html', '#aboutUs']
 const dropdownContainer = document.getElementById('dropdownContainer');
 const dropdownIcon = document.getElementById('dropdownIcon');
 
@@ -34,16 +34,16 @@ coursesDropdown.addEventListener('click', () => {
         dropdownList.classList.remove('dropdown__list-open')
     } else {
         const dropdownList = document.querySelector('.dropdown__list')
-        // dropdownList.classList.remove('dropdown__list')
         dropdownList.classList.add('dropdown__list-open')
         const moreCoursesUL = document.createElement('ul');
         coursesDropdown.insertAdjacentElement('afterend', moreCoursesUL);
         moreCoursesDropdown.forEach((e, i) => {
             const moreCoursesItem = document.createElement('li');
-            console.log(e)
-            moreCoursesItem.textContent = e;
-            moreCoursesItem.setAttribute('href', `#div${i}`)
+            const link = document.createElement('a')
+            link.textContent = e;
+            link.setAttribute('href', `../index.html#div${i}`)
             moreCoursesUL.appendChild(moreCoursesItem)
+            moreCoursesItem.appendChild(link)
             moreCoursesItem.classList.add('dropdown__list--more')
         })
     }

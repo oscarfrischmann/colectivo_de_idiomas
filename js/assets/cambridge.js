@@ -11,9 +11,11 @@ for (button of cambWasap) {
 const priceBtn = document.querySelectorAll('.btn.price');
 for (let i = 0; i < priceBtn.length; i++) {
 	priceBtn[i].addEventListener('click', () => {
+		console.log(i);
 		priceBtn[i].textContent = 'home';
-		priceBtn[i].setAttribute('id', 'changed');
-		const changed = document.getElementById('changed');
+		priceBtn[i].setAttribute('id', `changed${i}`);
+		priceBtn[i].classList.remove('price');
+		const changed = document.getElementById(`changed${i}`);
 		console.log(changed);
 		changed.addEventListener('click', () => {
 			window.location = '../index.html';
@@ -28,19 +30,34 @@ for (let i = 0; i < priceBtn.length; i++) {
 										<p id="longB2"><span>1.30</span>hs por semana:</p>
 										<div class="div">
 											<h3>Pago Mensual</h3>
-											<span>$${cambCoursePrice}</span>
+											<span class="span${i}">${cambCoursePrice}</span>
 										</div>
 										<div class="div">
 											<h3>Pago Curso Completo</h3>
-											<span>$${cambCoursePrice}</span>
+											<span class="span${i}">${cambCoursePrice}</span>
 										</div>
 										</div>
 								<div class="checkbox">
 										<span class="checkbox__span">Ver precio en USD</span>
-										<input type="checkbox" id="showUsdPricesB2">
+										<input type="checkbox" id="showUsdPrices${i}">
 								</div>
 			`;
 			cambUL[i].insertAdjacentElement('beforebegin', cambPrice);
+			const checkbox = document.getElementById(`showUsdPrices${i}`);
+			const usd = document.getElementsByClassName(`span${i}`);
+			console.log(usd);
+			checkbox.addEventListener('click', () => {
+				if (checkbox.checked) {
+					console.log('checked USD USD USD');
+					for (price of usd) {
+						price.innerText = cambCoursePriceUSD;
+					}
+				} else {
+					for (price of usd) {
+						price.innerText = cambCoursePrice;
+					}
+				}
+			});
 		}, 999);
 	});
 }

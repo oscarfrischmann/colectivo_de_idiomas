@@ -5,4 +5,5 @@ function openWasap() {
 	);
 }
 
-const cambCoursePrice = 12500;
+let cambCoursePrice = '$' + 12500;
+let cambCoursePriceUSD = 50 + 'USD';

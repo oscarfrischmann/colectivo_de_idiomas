@@ -43,6 +43,22 @@
   display: none;
 }
 
+@keyframes opacity1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes opacity0 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .cambridge__logo img {
   margin: 30px;
   width: 100px;
@@ -79,17 +95,58 @@
   grid-column: 2/3;
   grid-row: 1/2;
 }
-.cambridge__card div {
+.cambridge__card .price {
+  grid-column: 1/3;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.cambridge__card .price p {
+  place-self: center;
+  font-family: "segoe" sans-serif;
+  font-size: 1.2rem;
+}
+.cambridge__card .price .checkbox {
+  margin-right: 20px;
+}
+.cambridge__card div .price-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+  height: 150px;
+  border-radius: 70px;
+  box-shadow: 1px 1px 5px;
+}
+.cambridge__card div .price-container .div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  gap: 5px;
+}
+.cambridge__card div .price-container .div h3 {
+  font-size: 1rem;
+}
+.cambridge__card div .price-container .div span {
+  font-size: 1.5rem;
+}
+.cambridge__buttons {
   display: flex;
   grid-column: 1/3;
 }
-.cambridge__card div button {
+.cambridge__buttons button {
   margin: 0 auto;
 }
-.cambridge__card div button:nth-child(1) {
+.cambridge__buttons button:nth-child(1) {
   margin: 0 5px 0 60px;
 }
-.cambridge__card div button:nth-child(2) {
+.cambridge__buttons button:nth-child(2) {
   margin: 0 60px 0 5px;
 }
 .cambridge__courses {
@@ -406,22 +463,6 @@
   display: none;
 }
 
-@keyframes opacity1 {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes opacity0 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .opacity1 {
   animation: opacity1 1010ms ease-in-out;
 }
@@ -602,6 +643,14 @@ nav {
 
 .courses {
   width: 100%;
+}
+.courses__cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
 }
 .courses__main {
   display: flex;

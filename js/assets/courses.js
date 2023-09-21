@@ -100,9 +100,7 @@ courses.forEach((course, i) => {
 	});
 });
 
-const cardHeadersBG = document.getElementsByClassName(
-	'courses__card-container'
-);
+const cardHeadersBG = document.getElementsByClassName('courses__card-container');
 const cardHeadersBGColors = ['40B9B9', 'FBE800', 'E2318A', '40B9B9', 'FBE800'];
 
 for (let i = 0; i < cardHeadersBGColors.length; i++) {
@@ -119,4 +117,9 @@ levelCourses.addEventListener('click', () => {
 const cambridgeBtn = document.getElementById('coursesBtn1');
 cambridgeBtn.addEventListener('click', () => {
 	window.location.href = './pages/preparacion-examenes-internacionales.html';
+});
+
+const conversation = document.getElementById('coursesBtn2');
+conversation.addEventListener('click', () => {
+	window.location.href = './pages/talleres-de-conversacion-ingles.html';
 });

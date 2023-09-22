@@ -123,3 +123,7 @@ const conversation = document.getElementById('coursesBtn2');
 conversation.addEventListener('click', () => {
 	window.location.href = './pages/talleres-de-conversacion-ingles.html';
 });
+const individual = document.getElementById('coursesBtn4');
+individual.addEventListener('click', () => {
+	window.location.href = './pages/clases-ingles-individuales.html';
+});

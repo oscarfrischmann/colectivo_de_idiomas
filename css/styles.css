@@ -171,6 +171,17 @@
   color: red;
 }
 
+.cambridge__card.individuals {
+  height: 300px;
+  background-image: linear-gradient(180deg, #40B9B9 0% 20%, transparent 20% 100%);
+}
+.cambridge__card.individuals h2 {
+  font-size: 1.8rem;
+}
+.cambridge__card.individuals button {
+  margin: 50px auto;
+}
+
 .dropdown {
   width: 280px;
   height: fit-content;
@@ -890,6 +901,10 @@ nav {
 }
 .footer__end p {
   color: #3d3d3d;
+}
+.footer__media {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
 }
 
 @media (min-width: 768px) {

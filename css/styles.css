@@ -815,19 +815,24 @@ nav {
 .about-us__arrow {
   width: 110px;
   position: absolute;
-  top: 640px;
+  top: 595px;
   left: 170px;
   transform: scale(-1, 1) rotate(30deg);
 }
 
 .footer {
+  width: 100%;
   margin: 3em 0 0 0;
   overflow: hidden;
+  background-image: url(../img/violeta.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .footer__bg {
-  width: 100vw;
+  width: 1200px;
   position: absolute;
   z-index: -1;
+  overflow-x: hidden;
 }
 .footer__logo {
   width: 350px;

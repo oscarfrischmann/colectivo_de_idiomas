@@ -25,36 +25,80 @@ for (let i = 0; i < priceBtn.length; i++) {
 		setTimeout(() => {
 			const cambPrice = document.createElement('div');
 			cambPrice.classList.add('price');
-			cambPrice.innerHTML = `
-								<div class="price-container">
-										<p id="longB2"><span>1.30</span>hs por semana:</p>
-										<div class="div">
-											<h3>Pago Mensual</h3>
-											<span class="span${i}">${cambCoursePrice}</span>
-										</div>
-										<div class="div">
-											<h3>Pago Curso Completo</h3>
-											<span class="span${i}">${cambCoursePrice}</span>
-										</div>
-										</div>
-								<div class="checkbox">
-										<span class="checkbox__span">Ver precio en USD</span>
-										<input type="checkbox" id="showUsdPrices${i}">
-								</div>
-			`;
+
+			if (document.querySelector('.cambridge__card h2').textContent === 'B2 First') {
+				console.log('WE ARE INNNN');
+				cambPrice.innerHTML = `
+	<div class="price-container">
+			<p id="longB2"><span>1.30</span>hs por semana:</p>
+			<div class="div">
+				<h3>Pago Mensual</h3>
+				<span class="span${i}">${cambCoursePrice}</span>
+			</div>
+			<div class="div">
+				<h3>Pago Curso Completo</h3>
+				<span class="span${i}">${cambCoursePriceFull}</span>
+			</div>
+			</div>
+	<div class="checkbox">
+			<span class="checkbox__span">Ver precio en USD</span>
+			<input type="checkbox" id="showUsdPrices${i}">
+	</div>
+`;
+			} else {
+				cambPrice.innerHTML = `
+	<div class="price-container">
+			<p id="longB2"><span>1.30</span>hs por semana:</p>
+			<div class="div">
+				<h3>Pago Mensual</h3>
+				<span class="span${i}">${conversationPrice}</span>
+			</div>
+			<div class="div">
+				<h3>Pago Curso Completo</h3>
+				<span class="span${i}">${conversationPriceFull}</span>
+			</div>
+			</div>
+	<div class="checkbox">
+			<span class="checkbox__span">Ver precio en USD</span>
+			<input type="checkbox" id="showUsdPrices${i}">
+	</div>
+`;
+			}
+
 			cambUL[i].insertAdjacentElement('beforebegin', cambPrice);
 			const checkbox = document.getElementById(`showUsdPrices${i}`);
 			const usd = document.getElementsByClassName(`span${i}`);
 			console.log(usd);
 			checkbox.addEventListener('click', () => {
 				if (checkbox.checked) {
-					console.log('checked USD USD USD');
 					for (price of usd) {
-						price.innerText = cambCoursePriceUSD;
+						const usdPrice = document.getElementsByClassName(`span${i}`);
+
+						if (
+							document.querySelector('.cambridge__card h2').textContent ===
+							'B2 First'
+						) {
+							usdPrice[0].textContent = cambCoursePriceUSD;
+							usdPrice[1].textContent = cambCoursePriceUSDFull;
+						} else {
+							usdPrice[0].textContent = conversationPriceUSD;
+							usdPrice[1].textContent = conversationPriceUSDFull;
+						}
 					}
 				} else {
 					for (price of usd) {
-						price.innerText = cambCoursePrice;
+						const usdPrice = document.getElementsByClassName(`span${i}`);
+
+						if (
+							document.querySelector('.cambridge__card h2').textContent ===
+							'B2 First'
+						) {
+							usdPrice[0].textContent = cambCoursePrice;
+							usdPrice[1].textContent = cambCoursePriceFull;
+						} else {
+							usdPrice[0].textContent = conversationPrice;
+							usdPrice[1].textContent = conversationPriceFull;
+						}
 					}
 				}
 			});

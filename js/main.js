@@ -4,6 +4,14 @@ function openWasap() {
 		'_blank'
 	);
 }
-
+//*CAMBRIDGE Prices
 let cambCoursePrice = '$' + 12500;
-let cambCoursePriceUSD = 50 + 'USD';
+let cambCoursePriceFull = '$' + 51000;
+let cambCoursePriceUSD = 50 + ' USD';
+let cambCoursePriceUSDFull = 130 + ' USD';
+
+//*CONVERSATION Prices
+let conversationPrice = '$' + 6000;
+let conversationPriceFull = '$' + 23000;
+let conversationPriceUSD = 1000 + ' USD';
+let conversationPriceUSDFull = 100 + ' USD';

@@ -13,7 +13,8 @@ const moreCoursesDropdown = [
 	'seminarios temáticos',
 	'clases individuales',
 ];
-const navLinks = ['../index.html', '#aboutUs'];
+const navLinks = ['../index.html', '../index.html#aboutUs'];
+const navLinksHome = ['index.html', 'index.html#aboutUs'];
 const dropdownContainer = document.getElementById('dropdownContainer');
 const dropdownIcon = document.getElementById('dropdownIcon');
 
@@ -28,10 +29,18 @@ navMenu.forEach((e, i) => {
 	const ul = document.querySelector('.dropdown__list');
 	a.textContent = e;
 	ul.appendChild(li);
-	a.setAttribute('href', navLinks[i]);
-	if (a.textContent === 'cursos') {
-		li.setAttribute('id', 'coursesDropdown');
-		a.setAttribute('href', '#');
+	if (document.querySelector('.tittle__main.general')) {
+		a.setAttribute('href', navLinks[i]);
+		if (a.textContent === 'cursos') {
+			li.setAttribute('id', 'coursesDropdown');
+			a.setAttribute('href', '#');
+		}
+	} else {
+		a.setAttribute('href', navLinksHome[i]);
+		if (a.textContent === 'cursos') {
+			li.setAttribute('id', 'coursesDropdown');
+			a.setAttribute('href', '#');
+		}
 	}
 });
 

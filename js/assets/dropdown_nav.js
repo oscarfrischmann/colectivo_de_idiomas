@@ -14,7 +14,7 @@ const moreCoursesDropdown = [
 	'clases individuales',
 ];
 const navLinks = ['../index.html', '../index.html#aboutUs'];
-const navLinksHome = ['index.html', 'index.html#aboutUs'];
+const navLinksHome = ['./index.html', './index.html#aboutUs'];
 const dropdownContainer = document.getElementById('dropdownContainer');
 const dropdownIcon = document.getElementById('dropdownIcon');
 

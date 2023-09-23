@@ -54,7 +54,13 @@ coursesDropdown.addEventListener('click', () => {
 			const moreCoursesItem = document.createElement('li');
 			const link = document.createElement('a');
 			link.textContent = e;
-			link.setAttribute('href', `../index.html#div${i}`);
+
+			if (document.querySelector('.tittle__main.general')) {
+				link.setAttribute('href', `../index.html#div${i}`);
+			} else {
+				link.setAttribute('href', `./index.html#div${i}`);
+			}
+
 			moreCoursesUL.appendChild(moreCoursesItem);
 			moreCoursesItem.appendChild(link);
 			moreCoursesItem.classList.add('dropdown__list--more');

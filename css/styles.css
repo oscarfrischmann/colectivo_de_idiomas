@@ -662,6 +662,7 @@ main {
 .tittle__paragraph, .courses__paragraph {
   font-family: "segoe", sans-serif;
   width: 65vw;
+  max-width: 800px;
   font-size: 1.2rem;
   text-align: center;
   color: #3d3d3d;
@@ -949,6 +950,26 @@ nav {
   }
   nav {
     height: 200px;
+  }
+}
+@media (min-width: 992px) {
+  .about-us__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .about-us__arrow {
+    top: 29px;
+    left: 651px;
+    transform: scale(-1, -1) rotate(5deg);
+  }
+  .about-us__luana {
+    gap: 50px;
+  }
+  .about-us__emilia {
+    gap: 50px;
   }
 }
 

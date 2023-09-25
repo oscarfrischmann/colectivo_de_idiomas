@@ -59,6 +59,25 @@
     opacity: 1;
   }
 }
+.btn, .links .link__card a {
+  background-color: #FBE800;
+  padding: 0.7rem 1rem;
+  width: 100px;
+  border: none;
+  border-radius: 25px;
+  text-transform: capitalize;
+  color: #706F6F;
+  font-size: 0.8rem;
+  font-family: "roboto medium";
+  text-align: center;
+  margin: 1rem 4rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px;
+}
+.btn:active, .links .link__card a:active {
+  box-shadow: 1px 1px 1px;
+}
+
 .cambridge__logo .img {
   margin: 30px;
   width: 100px;
@@ -182,6 +201,38 @@
   margin: 50px auto;
 }
 
+.links__img {
+  margin: 10px auto;
+  width: 150px;
+}
+.links__cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.links .link__card {
+  border-radius: 30px;
+  box-shadow: 2px 2px 5px;
+  padding: 15px;
+}
+.links .link__card p {
+  width: 300px;
+  font-family: "segoe", sans-serif;
+  margin: 15px auto;
+}
+.links .link__card h4 {
+  text-transform: uppercase;
+}
+.links .link__card a {
+  text-decoration: none;
+  padding: 0.7rem 2rem;
+  margin-left: 100px;
+  margin-bottom: 30px;
+}
+
 .dropdown {
   width: 280px;
   height: fit-content;
@@ -282,7 +333,7 @@
   border-radius: 30px;
   align-content: center;
 }
-.courses__description--card .btn {
+.courses__description--card .btn, .courses__description--card .links .link__card a, .links .link__card .courses__description--card a {
   margin: 0 0 20px;
 }
 .courses__description--list {
@@ -350,31 +401,12 @@
   gap: 0;
   width: 80%;
 }
-.courses__description--price .btn-container .btn {
+.courses__description--price .btn-container .btn, .courses__description--price .btn-container .links .link__card a, .links .link__card .courses__description--price .btn-container a {
   margin: 0.5em 0.5em 0 0.5em;
 }
 .courses__description--price .checkbox span {
   font-family: "segoe";
   font-size: 0.9rem;
-}
-
-.btn {
-  background-color: #FBE800;
-  padding: 0.7rem 1rem;
-  width: 100px;
-  border: none;
-  border-radius: 25px;
-  text-transform: capitalize;
-  color: #706F6F;
-  font-size: 0.8rem;
-  font-family: "roboto medium";
-  text-align: center;
-  margin: 1rem 4rem;
-  cursor: pointer;
-  box-shadow: 2px 2px 5px;
-}
-.btn:active {
-  box-shadow: 1px 1px 1px;
 }
 
 .card0,
@@ -537,7 +569,7 @@
   margin: 2em 2em;
   font-family: "segoe";
 }
-.courses .btn {
+.courses .btn, .courses .links .link__card a, .links .link__card .courses a {
   position: absolute;
   bottom: 20px;
   right: 30px;
@@ -618,6 +650,9 @@ main {
 .tittle__main--two.cambridge {
   font-size: 1.5rem;
   text-align: center;
+}
+.tittle__main--two.links__tittle {
+  font-size: 2.5rem;
 }
 .tittle__span {
   font-family: "Roboto light";

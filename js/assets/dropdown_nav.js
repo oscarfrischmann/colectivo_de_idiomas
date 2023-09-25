@@ -13,8 +13,22 @@ const moreCoursesDropdown = [
 	'seminarios temáticos',
 	'clases individuales',
 ];
-const navLinks = ['../index.html', '../index.html#aboutUs'];
-const navLinksHome = ['./index.html', './index.html#aboutUs'];
+const navLinks = [
+	'../index.html',
+	'../index.html#aboutUs',
+	'#',
+	'#',
+	'#',
+	'../pages/enlaces-utiles.html',
+];
+const navLinksHome = [
+	'./index.html',
+	'./index.html#aboutUs',
+	'#',
+	'#',
+	'#',
+	'./pages/enlaces-utiles.html',
+];
 const dropdownContainer = document.getElementById('dropdownContainer');
 const dropdownIcon = document.getElementById('dropdownIcon');
 

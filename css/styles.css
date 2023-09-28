@@ -268,23 +268,6 @@
   color: #E2318A;
   transition: all 0.1s ease-in-out;
 }
-
-.dropdown__active {
-  transition: transform 1s ease-in;
-  transform: translateX(285px);
-}
-
-.dropdown {
-  width: 280px;
-  height: fit-content;
-  background-color: whitesmoke;
-  box-shadow: 2px 2px 5px;
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  left: -285px;
-  transition: transform 1s ease-in-out;
-}
 .dropdown__list--more {
   font-size: 0.9rem;
   font-family: "segoe", sans-serif;
@@ -301,6 +284,23 @@
   grid-template-rows: repeat(3, 40px) 130px repeat(3, 40px);
   align-items: start;
   transition: all 1s ease-in-out;
+}
+
+.dropdown__active {
+  transition: transform 1s ease-in;
+  transform: translateX(285px);
+}
+
+.dropdown {
+  width: 280px;
+  height: fit-content;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 5px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  left: -285px;
+  transition: transform 1s ease-in-out;
 }
 
 .courses__description--tittle {
@@ -949,7 +949,7 @@ nav {
     margin: 0 auto;
   }
   nav {
-    height: 200px;
+    height: 142px;
   }
 }
 @media (min-width: 992px) {
@@ -970,6 +970,33 @@ nav {
   }
   .about-us__emilia {
     gap: 50px;
+  }
+  nav {
+    background-position: bottom;
+  }
+}
+@media (min-width: 1296px) {
+  #dropdownIcon {
+    display: none;
+  }
+  nav {
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  .nav-container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-left: 100px;
+    list-style-type: none;
+    font-size: 2rem;
+    text-transform: capitalize;
+  }
+  .nav-container ul li {
+    color: #706F6F;
   }
 }
 

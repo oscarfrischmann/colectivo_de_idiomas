@@ -3,7 +3,7 @@ const navMenu = [
 	'quienes somos',
 	'cursos',
 	'precios',
-	'freebies',
+	// 'freebies',
 	'enlaces',
 ];
 const moreCoursesDropdown = [
@@ -13,22 +13,8 @@ const moreCoursesDropdown = [
 	'seminarios temáticos',
 	'clases individuales',
 ];
-const navLinks = [
-	'../index.html',
-	'../index.html#aboutUs',
-	'#',
-	'#',
-	'#',
-	'../pages/enlaces-utiles.html',
-];
-const navLinksHome = [
-	'./index.html',
-	'./index.html#aboutUs',
-	'#',
-	'#',
-	'#',
-	'./pages/enlaces-utiles.html',
-];
+const navLinks = ['../index.html', '../index.html#aboutUs', '#', '#', '../pages/enlaces-utiles.html'];
+const navLinksHome = ['./index.html', './index.html#aboutUs', '#', '#', './pages/enlaces-utiles.html'];
 const dropdownContainer = document.getElementById('dropdownContainer');
 const dropdownIcon = document.getElementById('dropdownIcon');
 
@@ -90,7 +76,7 @@ coursesDropdown.addEventListener('click', () => {
 		});
 	}
 });
-
+//* navbar tablet/desktop
 if (window.innerWidth >= 1296) {
 	const navContainer = document.createElement('div');
 	navContainer.className = 'nav-container';
@@ -108,11 +94,21 @@ if (window.innerWidth >= 1296) {
 	console.log(nav);
 
 	navMenu.forEach((e, i) => {
-		const a = document.createElement('a');
-		const liNav = document.createElement('li');
-		navList.appendChild(liNav);
-		liNav.appendChild(a);
-		a.innerText = e;
+		if (e != 'cursos') {
+			const a = document.createElement('a');
+			const liNav = document.createElement('li');
+			navList.appendChild(liNav);
+			liNav.appendChild(a);
+			a.innerText = e;
+			a.setAttribute('href', navLinks[i]);
+		} else {
+			const a = document.createElement('a');
+			const liNav = document.createElement('li');
+			navList.appendChild(liNav);
+			liNav.appendChild(a);
+			a.innerText = e;
+			a.setAttribute('href', '../../index.html#coursesCardContainer2');
+		}
 	});
 }
 

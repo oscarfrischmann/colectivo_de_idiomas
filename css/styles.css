@@ -216,7 +216,13 @@
 .links .link__card {
   border-radius: 30px;
   box-shadow: 2px 2px 5px;
-  padding: 15px;
+  padding: 25px;
+  height: 205px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  position: relative;
 }
 .links .link__card p {
   width: 300px;
@@ -230,7 +236,10 @@
   text-decoration: none;
   padding: 0.7rem 2rem;
   margin-left: 100px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  place-self: start;
+  position: absolute;
+  bottom: -30px;
 }
 
 .dropdown {
@@ -303,6 +312,14 @@
   transition: transform 1s ease-in-out;
 }
 
+.courses__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
 .courses__description--tittle {
   display: flex;
   flex-direction: row;
@@ -328,7 +345,7 @@
   box-shadow: 2px 2px 5px;
   max-width: 400px;
   width: 335px;
-  height: 460px;
+  height: fit-content;
   margin: 15px auto;
   border-radius: 30px;
   align-content: center;
@@ -339,19 +356,18 @@
 .courses__description--list {
   font-family: "segoe";
   width: 80%;
+  margin-bottom: 15px;
 }
 .courses__description--price {
   display: grid;
-  grid-template-rows: 100px 50px 100px 52px 20px 45px;
   justify-items: center;
   row-gap: 10px;
-  margin-top: -60px;
 }
 .courses__description--price h2 {
   font-family: "roboto bold";
   font-size: 2.3rem;
   line-height: 20px;
-  margin-top: 1.5em;
+  margin-bottom: 40px;
 }
 .courses__description--price h2 span {
   font-family: "roboto thin";
@@ -362,24 +378,21 @@
   font-family: "segoe";
   width: 70%;
   text-align: center;
-}
-.courses__description--price img {
-  width: 70px;
+  margin: 0px 0;
 }
 .courses__description--price .price-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   gap: 20px;
   width: 300px;
   height: 50px;
   border-radius: 30px;
   box-shadow: 2px 2px 5px;
-  background-image: linear-gradient(-90deg, #FBE800 0% 20%, transparent 20% 100%);
+  margin: 5px auto;
 }
 .courses__description--price .price-container p {
-  margin-left: 30px;
   font-family: "segoe";
 }
 .courses__description--price .price-container span {
@@ -402,11 +415,60 @@
   width: 80%;
 }
 .courses__description--price .btn-container .btn, .courses__description--price .btn-container .links .link__card a, .links .link__card .courses__description--price .btn-container a {
-  margin: 0.5em 0.5em 0 0.5em;
+  margin: 3em 0.5em 0 0.5em;
+}
+.courses__description--price .checkbox {
+  padding-top: 0px;
 }
 .courses__description--price .checkbox span {
   font-family: "segoe";
   font-size: 0.9rem;
+}
+
+#prices,
+#schedule {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 2px 2px 5px;
+  max-width: 400px;
+  width: 335px;
+  height: 434px;
+  margin: 10px auto;
+  border-radius: 30px;
+  align-content: center;
+}
+#prices h2,
+#schedule h2 {
+  font-family: "roboto bold";
+  font-size: 2.3rem;
+  line-height: 20px;
+  margin: 20px 0;
+}
+#prices img,
+#schedule img {
+  width: 100px;
+}
+
+#schedule .sc1 {
+  color: #E2318A;
+  font-size: 2.3rem;
+}
+#schedule .sc2 {
+  font-size: 2rem;
+  color: #706F6F;
+}
+#schedule .sc3 {
+  font-size: 1.8rem;
+}
+#schedule .price-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .card0,
@@ -415,7 +477,7 @@
 .card {
   max-width: 400px;
   width: 335px;
-  height: 265px;
+  height: fit-content;
   margin: 0 auto 1rem auto;
   padding: 5px;
   border-radius: 30px;
@@ -610,6 +672,7 @@ main {
   gap: 0;
 }
 
+/* main*/
 .tittle {
   width: 90vw;
   display: flex;
@@ -676,6 +739,7 @@ main {
   place-self: center;
 }
 
+/* --main*/
 nav {
   display: flex;
   flex-direction: row;
@@ -693,6 +757,10 @@ nav {
   position: relative;
 }
 
+.nav-container a {
+  text-decoration: none;
+}
+
 .logo {
   width: 150px;
 }
@@ -702,6 +770,10 @@ nav {
   margin: 1rem;
   font-size: 2rem;
   cursor: pointer;
+}
+
+#coursesCardContainer2 {
+  height: 20px;
 }
 
 .courses {
@@ -749,8 +821,13 @@ nav {
 }
 
 .learn {
-  padding-top: 100px;
+  padding-top: 80px;
   overflow: hidden;
+  width: 100%;
+  margin: 3em 0 0 0;
+  background-image: url(../../img/violeta.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .learn__bg {
   width: 100vw;

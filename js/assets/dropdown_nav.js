@@ -107,7 +107,7 @@ if (window.innerWidth >= 1296) {
 			navList.appendChild(liNav);
 			liNav.appendChild(a);
 			a.innerText = e;
-			a.setAttribute('href', './index.html#coursesCardContainer2');
+			a.setAttribute('href', '../index.html#coursesCardContainer2');
 		}
 	});
 }

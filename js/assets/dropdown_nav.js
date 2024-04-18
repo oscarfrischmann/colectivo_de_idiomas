@@ -100,7 +100,7 @@ if (window.innerWidth >= 1296) {
 			navList.appendChild(liNav);
 			liNav.appendChild(a);
 			a.innerText = e;
-			a.setAttribute('href', navLinks[i]);
+			a.setAttribute('href', navLinksHome[i]);
 		} else {
 			const a = document.createElement('a');
 			const liNav = document.createElement('li');
@@ -111,15 +111,3 @@ if (window.innerWidth >= 1296) {
 		}
 	});
 }
-
-// if (window.innerWidth >= 1296) {
-// 	const navContainer = document.createElement('div');
-// 	navContainer.className = 'nav-container';
-// 	const nav = document.getElementsByTagName('nav');
-// 	const navList = document.createElement('ul');
-// 	nav[0].appendChild(navContainer);
-// 	window.innerWidth < 1296 ? navContainer.removeChild(navList) : navContainer.appendChild(navList);
-
-// 	navMenu.forEach((link, i) => {});
-// }
-// console.info(navLinks);

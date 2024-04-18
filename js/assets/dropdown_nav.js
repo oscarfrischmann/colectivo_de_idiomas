@@ -14,7 +14,7 @@ const moreCoursesDropdown = [
 	'clases individuales',
 ];
 const navLinks = ['../../index.html', '../../index.html#aboutUs', '#', '#', './pages/enlaces-utiles.html'];
-const navLinksHome = ['./index.html', './index.html#aboutUs', '#', '#', './pages/enlaces-utiles.html'];
+const navLinksHome = ['/index.html', '/index.html#aboutUs', '#', '#', './pages/enlaces-utiles.html'];
 const dropdownContainer = document.getElementById('dropdownContainer');
 const dropdownIcon = document.getElementById('dropdownIcon');
 
@@ -65,9 +65,9 @@ coursesDropdown.addEventListener('click', () => {
 			link.textContent = e;
 
 			if (document.querySelector('.tittle__main.general')) {
-				link.setAttribute('href', `./index.html#div${i}`);
+				link.setAttribute('href', `../../index.html#div${i}`);
 			} else {
-				link.setAttribute('href', `../index.html#div${i}`);
+				link.setAttribute('href', `./index.html#div${i}`);
 			}
 
 			moreCoursesUL.appendChild(moreCoursesItem);

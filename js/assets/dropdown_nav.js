@@ -77,49 +77,49 @@ coursesDropdown.addEventListener('click', () => {
 	}
 });
 //* navbar tablet/desktop
-// if (window.innerWidth >= 1296) {
-// 	const navContainer = document.createElement('div');
-// 	navContainer.className = 'nav-container';
-// 	const nav = document.getElementsByTagName('nav');
-// 	const navList = document.createElement('ul');
-// 	nav[0].appendChild(navContainer);
-// 	window.addEventListener('resize', () => {
-// 		if (window.innerWidth < 1300) {
-// 			navContainer.removeChild(navList);
-// 		} else {
-// 			navContainer.appendChild(navList);
-// 		}
-// 	});
-// 	navContainer.appendChild(navList);
-// 	console.log(nav);
-
-// 	navMenu.forEach((e, i) => {
-// 		if (e != 'cursos') {
-// 			const a = document.createElement('a');
-// 			const liNav = document.createElement('li');
-// 			navList.appendChild(liNav);
-// 			liNav.appendChild(a);
-// 			a.innerText = e;
-// 			a.setAttribute('href', navLinks[i]);
-// 		} else {
-// 			const a = document.createElement('a');
-// 			const liNav = document.createElement('li');
-// 			navList.appendChild(liNav);
-// 			liNav.appendChild(a);
-// 			a.innerText = e;
-// 			a.setAttribute('href', '../index.html#coursesCardContainer2');
-// 		}
-// 	});
-// }
-
 if (window.innerWidth >= 1296) {
 	const navContainer = document.createElement('div');
 	navContainer.className = 'nav-container';
 	const nav = document.getElementsByTagName('nav');
 	const navList = document.createElement('ul');
 	nav[0].appendChild(navContainer);
-	window.innerWidth < 1296 ? navContainer.removeChild(navList) : navContainer.appendChild(navList);
+	window.addEventListener('resize', () => {
+		if (window.innerWidth < 1300) {
+			navContainer.removeChild(navList);
+		} else {
+			navContainer.appendChild(navList);
+		}
+	});
+	navContainer.appendChild(navList);
+	console.log(nav);
 
-	navMenu.forEach((link, i) => {});
+	navMenu.forEach((e, i) => {
+		if (e != 'cursos') {
+			const a = document.createElement('a');
+			const liNav = document.createElement('li');
+			navList.appendChild(liNav);
+			liNav.appendChild(a);
+			a.innerText = e;
+			a.setAttribute('href', navLinks[i]);
+		} else {
+			const a = document.createElement('a');
+			const liNav = document.createElement('li');
+			navList.appendChild(liNav);
+			liNav.appendChild(a);
+			a.innerText = e;
+			a.setAttribute('href', '../index.html#coursesCardContainer2');
+		}
+	});
 }
-console.info(navLinks);
+
+// if (window.innerWidth >= 1296) {
+// 	const navContainer = document.createElement('div');
+// 	navContainer.className = 'nav-container';
+// 	const nav = document.getElementsByTagName('nav');
+// 	const navList = document.createElement('ul');
+// 	nav[0].appendChild(navContainer);
+// 	window.innerWidth < 1296 ? navContainer.removeChild(navList) : navContainer.appendChild(navList);
+
+// 	navMenu.forEach((link, i) => {});
+// }
+// console.info(navLinks);

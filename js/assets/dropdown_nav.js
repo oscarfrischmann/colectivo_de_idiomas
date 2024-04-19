@@ -13,8 +13,8 @@ const moreCoursesDropdown = [
 	'seminarios temáticos',
 	'clases individuales',
 ];
-const navLinks = ['../../index.html', '../../index.html#aboutUs', '#', '#', '../enlaces-utiles.html'];
-const navLinksHome = ['/index.html', '/index.html#aboutUs', '#', '#', './pages/enlaces-utiles.html'];
+const navLinks = ['../../index.html', '../../index.html#aboutUs', '#', '#', './enlaces-utiles.html'];
+const navLinksHome = ['/index.html', '/index.html#aboutUs', '#', '#', '/pages/enlaces-utiles.html'];
 const dropdownContainer = document.getElementById('dropdownContainer');
 const dropdownIcon = document.getElementById('dropdownIcon');
 
@@ -94,6 +94,8 @@ if (window.innerWidth >= 1296) {
 	console.log(nav);
 
 	navMenu.forEach((e, i) => {
+		const title = document.title;
+		console.log(title);
 		if (e != 'cursos') {
 			const a = document.createElement('a');
 			const liNav = document.createElement('li');

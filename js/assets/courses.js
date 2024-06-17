@@ -15,7 +15,7 @@ courses.push(
 		'cursos',
 		'de inglés general',
 		'./img/colectivo-amarillo.png',
-		'Están divididos en niveles desde Elemental hasta Avanzado, homologados con el MCER. Cada nivel se completa al finalizar dos cuatrimestres de estudio.',
+		'Están divididos en niveles desde Elemental hasta Avanzado, homologados con el MCER. Cada nivel se completa al finalizar dos cuatrimestres de estudio. Cursos disponibles: Inicial, A1, A2, B1, B2, C1.',
 		'ver más'
 	)
 );

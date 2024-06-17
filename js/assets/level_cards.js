@@ -1,39 +1,43 @@
+// import { courseScheduleDB, pricesDB } from "./login.js";
+import * as login from "./login.js";
 const coursesArr = [];
 const descriptionsBeguiner = [
-	'Aprendé Inglés desde cero.',
-	'Hablá desde el primer dia.',
-	'Grupos reducidos.',
-	'Material de estudio y práctica incluido.',
+  "Aprendé Inglés desde cero.",
+  "Hablá desde el primer dia.",
+  "Grupos reducidos.",
+  "Material de estudio y práctica incluido.",
 ];
 const descriptionsInter = [
-	'Mejorá tu nivel de inglés.',
-	'Foco en la comunicación.',
-	'Grupos reducidos.',
-	'Material de estudio y práctica incluido.',
+  "Mejorá tu nivel de inglés.",
+  "Foco en la comunicación.",
+  "Grupos reducidos.",
+  "Material de estudio y práctica incluido.",
 ];
 const descriptionsAdv = [
-	'Perfeccioná tu inglés.',
-	'Desarrollá habilidades profesionales de conversación.',
-	'Grupos reducidos.',
-	'Material de estudio y práctica incluido.',
+  "Perfeccioná tu inglés.",
+  "Desarrollá habilidades profesionales de conversación.",
+  "Grupos reducidos.",
+  "Material de estudio y práctica incluido.",
 ];
 
 class Level {
-	constructor(tittle, level, names, description) {
-		this.tittle = tittle;
-		this.level = level;
-		this.names = names;
-		this.description = description;
-	}
+  constructor(tittle, level, names, description) {
+    this.tittle = tittle;
+    this.level = level;
+    this.names = names;
+    this.description = description;
+  }
 }
 
-coursesArr.push(new Level('nivel', 'principiante', 'a1/a2', descriptionsBeguiner));
-coursesArr.push(new Level('nivel', 'intermedio', 'b1/b2', descriptionsInter));
-coursesArr.push(new Level('nivel', 'avanzado', 'c1/c2', descriptionsAdv));
+coursesArr.push(
+  new Level("nivel", "principiante", "a1/a2", descriptionsBeguiner)
+);
+coursesArr.push(new Level("nivel", "intermedio", "b1/b2", descriptionsInter));
+coursesArr.push(new Level("nivel", "avanzado", "c1/c2", descriptionsAdv));
 
 console.log(coursesArr);
 
-const cardContainer = document.getElementById('cardContainer');
+const cardContainer = document.getElementById("cardContainer");
 
 //! Cards Deleted by client
 // coursesArr.forEach((e, i) => {
@@ -103,20 +107,20 @@ const cardContainer = document.getElementById('cardContainer');
 // console.log(showPriceBtn);
 // const hideDescriptionCard = document.querySelectorAll('.courses__description--card');
 // const short = '1.15';
+console.log(login.pricesDB);
+let monthlyPay = login.pricesDB.monthlyPay;
+let coursePay = login.pricesDB.coursePay;
 
-let monthPriceLong = '11400';
-let monthPriceShort = '40000';
-
-const price = document.getElementById('prices');
+const price = document.getElementById("prices");
 price.innerHTML = `
 <div class="courses__description--price">
 <h2>Precios</h2>
 	
 	<div class="price-container">
-		<p id="long0"><span>Pago mensual: <span>$ ${monthPriceLong}</span></p>
+		<p id="long0"><span>Pago mensual: <span>$ ${monthlyPay}</span></p>
 	</div>
 	<div class="price-container">
-		<p id="long0"><span>Pago curso completo:</span> <span>$ ${monthPriceShort}</span></p>
+		<p id="long0"><span>Pago curso completo:</span> <span>$ ${coursePay}</span></p>
 	</div>
 	
 	<div class="btn-container">
@@ -126,30 +130,10 @@ price.innerHTML = `
 	<span class="courses__description--test">Escribinos para solicitar un test de nivel!</span>
 </div>
 	`;
-let coursesSchedule = [
-	{
-		name: 'A1',
-		date: '2/11 al 25/1',
-		day: 'Lunes',
-		time: '16:30',
-	},
-	{
-		name: 'A2',
-		date: '2/11 al 25/1',
-		day: 'Miércoles',
-		time: '17:30',
-	},
-	{
-		name: 'B1',
-		date: '2/11 al 25/1',
-		day: 'Viernes',
-		time: '12:30',
-	},
-];
-const schedule = document.getElementById('coursesSchedule');
-
-coursesSchedule.forEach((courses, i) => {
-	schedule.innerHTML += `
+console.log(login.courseScheduleDB2);
+const schedule = document.getElementById("coursesSchedule");
+login.courseScheduleDB2.coursesSchedule.forEach((courses, i) => {
+  schedule.innerHTML += `
 	<div class="price-container">
 	<span class="sc1">${courses.name} </span>
 	<span class="sc2">${courses.date} </span>

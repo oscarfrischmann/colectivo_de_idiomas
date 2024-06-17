@@ -59,14 +59,15 @@
     opacity: 1;
   }
 }
-.btn, .links .link__card a {
-  background-color: #FBE800;
+.btn,
+.links .link__card a {
+  background-color: #fbe800;
   padding: 0.7rem 1rem;
   width: 100px;
   border: none;
   border-radius: 25px;
   text-transform: capitalize;
-  color: #706F6F;
+  color: #706f6f;
   font-size: 0.8rem;
   font-family: "roboto medium";
   text-align: center;
@@ -74,7 +75,8 @@
   cursor: pointer;
   box-shadow: 2px 2px 5px;
 }
-.btn:active, .links .link__card a:active {
+.btn:active,
+.links .link__card a:active {
   box-shadow: 1px 1px 1px;
 }
 
@@ -92,7 +94,11 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 2fr 9fr 2fr;
   box-shadow: 2px 2px 5px;
-  background-image: linear-gradient(180deg, #E2318A 0% 15%, transparent 15% 100%);
+  background-image: linear-gradient(
+    180deg,
+    #e2318a 0% 15%,
+    transparent 15% 100%
+  );
 }
 .cambridge__card h2 {
   justify-self: center;
@@ -192,7 +198,11 @@
 
 .cambridge__card.individuals {
   height: 300px;
-  background-image: linear-gradient(180deg, #40B9B9 0% 20%, transparent 20% 100%);
+  background-image: linear-gradient(
+    180deg,
+    #40b9b9 0% 20%,
+    transparent 20% 100%
+  );
 }
 .cambridge__card.individuals h2 {
   font-size: 1.8rem;
@@ -265,16 +275,17 @@
   margin: 5px 0;
 }
 .dropdown__list li a {
-  color: #706F6F;
+  color: #706f6f;
   text-decoration: none;
   font-family: "segoe", sans-serif;
   text-transform: capitalize;
   white-space: nowrap;
   transition: all 0.3s ease-in-out;
 }
-.dropdown__list li a:hover, .dropdown__list li a:active {
+.dropdown__list li a:hover,
+.dropdown__list li a:active {
   font-size: 1.1em;
-  color: #E2318A;
+  color: #e2318a;
   transition: all 0.1s ease-in-out;
 }
 .dropdown__list--more {
@@ -331,7 +342,7 @@
   text-transform: uppercase;
 }
 .courses__description--tittle h2 {
-  color: #E2318A;
+  color: #e2318a;
 }
 .courses__description--tittle img {
   width: 150px;
@@ -350,7 +361,9 @@
   border-radius: 30px;
   align-content: center;
 }
-.courses__description--card .btn, .courses__description--card .links .link__card a, .links .link__card .courses__description--card a {
+.courses__description--card .btn,
+.courses__description--card .links .link__card a,
+.links .link__card .courses__description--card a {
   margin: 0 0 20px;
 }
 .courses__description--list {
@@ -414,7 +427,9 @@
   gap: 0;
   width: 80%;
 }
-.courses__description--price .btn-container .btn, .courses__description--price .btn-container .links .link__card a, .links .link__card .courses__description--price .btn-container a {
+.courses__description--price .btn-container .btn,
+.courses__description--price .btn-container .links .link__card a,
+.links .link__card .courses__description--price .btn-container a {
   margin: 3em 0.5em 0 0.5em;
 }
 .courses__description--price .checkbox {
@@ -453,12 +468,12 @@
 }
 
 #schedule .sc1 {
-  color: #E2318A;
+  color: #e2318a;
   font-size: 2.3rem;
 }
 #schedule .sc2 {
   font-size: 2rem;
-  color: #706F6F;
+  color: #706f6f;
 }
 #schedule .sc3 {
   font-size: 1.8rem;
@@ -486,7 +501,11 @@
   grid-template-columns: repeat(6, 55.83px);
   grid-template-rows: repeat(3, 80px);
   grid-template-areas: "tittle tittle tittle names names names" "specs specs specs specs imgBtn imgBtn" "specs specs specs specs imgBtn imgBtn";
-  background-image: linear-gradient(180deg, #40B9B9 0% 38%, transparent 38% 100%);
+  background-image: linear-gradient(
+    180deg,
+    #40b9b9 0% 38%,
+    transparent 38% 100%
+  );
 }
 .card0__tittle,
 .card1__tittle,
@@ -500,7 +519,7 @@
 .card2__tittle--one,
 .card__tittle--one {
   font-size: 2rem;
-  color: #E2318A;
+  color: #e2318a;
   justify-self: end;
   text-transform: uppercase;
   text-align: end;
@@ -631,7 +650,9 @@
   margin: 2em 2em;
   font-family: "segoe";
 }
-.courses .btn, .courses .links .link__card a, .links .link__card .courses a {
+.courses .btn,
+.courses .links .link__card a,
+.links .link__card .courses a {
   position: absolute;
   bottom: 20px;
   right: 30px;
@@ -645,7 +666,7 @@
 
 #div1 h5,
 #div4 h5 {
-  color: #E2318A;
+  color: #e2318a;
 }
 
 #div1 img {
@@ -688,7 +709,7 @@ main {
   font-family: "Roboto thin";
   font-size: 1rem;
   text-transform: uppercase;
-  color: #E2318A;
+  color: #e2318a;
   margin-left: 20px;
   padding-right: 87px;
 }
@@ -722,7 +743,8 @@ main {
   padding-left: 50px;
   font-size: 1.1rem;
 }
-.tittle__paragraph, .courses__paragraph {
+.tittle__paragraph,
+.courses__paragraph {
   font-family: "segoe", sans-serif;
   width: 65vw;
   max-width: 800px;
@@ -731,8 +753,9 @@ main {
   color: #3d3d3d;
   place-self: center;
 }
-.tittle__paragraph a, .courses__paragraph a {
-  color: #40B9B9;
+.tittle__paragraph a,
+.courses__paragraph a {
+  color: #40b9b9;
 }
 .tittle img {
   width: 350px;
@@ -766,7 +789,7 @@ nav {
 }
 
 .dropdown-icon {
-  color: #E2318A;
+  color: #e2318a;
   margin: 1rem;
   font-size: 2rem;
   cursor: pointer;
@@ -813,7 +836,7 @@ nav {
 }
 .courses__span em {
   font-style: unset;
-  color: #E2318A;
+  color: #e2318a;
 }
 .courses__levels {
   width: 90%;
@@ -865,11 +888,11 @@ nav {
   font-size: 1.1rem;
   width: 330px;
   color: white;
-  background-color: #40B9B9;
+  background-color: #40b9b9;
   padding: 2em;
   margin: 1em 0 3em 0;
   border-radius: 7px;
-  border: 1px solid #706F6F;
+  border: 1px solid #706f6f;
 }
 
 .about-us {
@@ -887,7 +910,7 @@ nav {
   z-index: -1;
 }
 .about-us h2 {
-  color: #40B9B9;
+  color: #40b9b9;
   font-family: "roboto";
   font-size: 2.5rem;
 }
@@ -908,7 +931,7 @@ nav {
   padding: 0.5em 1em 0.5em 0.5em;
 }
 .about-us__luana p:nth-child(1) {
-  color: #E2318A;
+  color: #e2318a;
 }
 .about-us__luana--arrow {
   width: 110px;
@@ -934,7 +957,7 @@ nav {
   padding: 0.5em 0.1em 0.5em 1em;
 }
 .about-us__emilia p:nth-child(1) {
-  color: #E2318A;
+  color: #e2318a;
 }
 .about-us__arrow {
   width: 110px;
@@ -971,7 +994,7 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 0;
-  background-color: #40B9B9;
+  background-color: #40b9b9;
 }
 .footer__info img {
   width: 100px;
@@ -987,7 +1010,7 @@ nav {
   font-size: 2rem;
   margin: 1em;
   text-transform: capitalize;
-  color: #FBE800;
+  color: #fbe800;
 }
 .footer__info--tittle:nth-of-type(3) {
   margin: 1em 0;
@@ -1019,6 +1042,16 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, auto);
 }
+/* LOGIN and manage*/
+.sched-container {
+  margin: 10px;
+  max-width: 330px;
+}
+.course__sched {
+  display: flex;
+  flex-direction: column;
+}
+/* LOGIN and manage*/
 
 @media (min-width: 768px) {
   body {
@@ -1073,7 +1106,7 @@ nav {
     text-transform: capitalize;
   }
   .nav-container ul li {
-    color: #706F6F;
+    color: #706f6f;
   }
 }
 

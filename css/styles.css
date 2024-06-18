@@ -10,22 +10,27 @@
   font-family: "Roboto thin";
   src: url("../fonts/roboto/Roboto-Thin.ttf");
 }
+
 @font-face {
   font-family: "Roboto bold";
   src: url("../fonts/roboto/Roboto-Bold.ttf");
 }
+
 @font-face {
   font-family: "Roboto medium";
   src: url("../fonts/roboto/Roboto-Medium.ttf");
 }
+
 @font-face {
   font-family: "segoe";
   src: url("../fonts/SEGOEUI.TTF");
 }
+
 @font-face {
   font-family: "comfortaa";
   src: url(../fonts/comfortaa/Comfortaa-Regular.ttf);
 }
+
 .clipped {
   clip: rect(0 0 0 0);
   border: 0;
@@ -47,18 +52,22 @@
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
 }
+
 @keyframes opacity0 {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 .btn,
 .links .link__card a {
   background-color: #fbe800;
@@ -75,6 +84,7 @@
   cursor: pointer;
   box-shadow: 2px 2px 5px;
 }
+
 .btn:active,
 .links .link__card a:active {
   box-shadow: 1px 1px 1px;
@@ -84,6 +94,7 @@
   margin: 30px;
   width: 100px;
 }
+
 .cambridge__card {
   height: 500px;
   width: 335px;
@@ -94,12 +105,11 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 2fr 9fr 2fr;
   box-shadow: 2px 2px 5px;
-  background-image: linear-gradient(
-    180deg,
-    #e2318a 0% 15%,
-    transparent 15% 100%
-  );
+  background-image: linear-gradient(180deg,
+      #e2318a 0% 15%,
+      transparent 15% 100%);
 }
+
 .cambridge__card h2 {
   justify-self: center;
   font-size: 2rem;
@@ -108,12 +118,14 @@
   grid-row: 1/2;
   padding-right: 100px;
 }
+
 .cambridge__card ul {
   grid-column: 1/3;
   padding: 17px 45px;
   font-family: "segoe";
   align-self: flex-start;
 }
+
 .cambridge__card img {
   width: 60%;
   justify-self: end;
@@ -121,6 +133,7 @@
   grid-column: 2/3;
   grid-row: 1/2;
 }
+
 .cambridge__card .price {
   grid-column: 1/3;
   justify-self: center;
@@ -130,14 +143,17 @@
   align-items: center;
   gap: 30px;
 }
+
 .cambridge__card .price p {
   place-self: center;
   font-family: "segoe" sans-serif;
   font-size: 1.2rem;
 }
+
 .cambridge__card .price .checkbox {
   margin-right: 20px;
 }
+
 .cambridge__card div .price-container {
   display: flex;
   flex-direction: column;
@@ -149,6 +165,7 @@
   border-radius: 70px;
   box-shadow: 1px 1px 5px;
 }
+
 .cambridge__card div .price-container .div {
   display: flex;
   flex-direction: row;
@@ -156,25 +173,32 @@
   align-items: baseline;
   gap: 5px;
 }
+
 .cambridge__card div .price-container .div h3 {
   font-size: 1rem;
 }
+
 .cambridge__card div .price-container .div span {
   font-size: 1.5rem;
 }
+
 .cambridge__buttons {
   display: flex;
   grid-column: 1/3;
 }
+
 .cambridge__buttons button {
   margin: 0 auto;
 }
+
 .cambridge__buttons button:nth-child(1) {
   margin: 0 5px 0 60px;
 }
+
 .cambridge__buttons button:nth-child(2) {
   margin: 0 60px 0 5px;
 }
+
 .cambridge__courses {
   display: flex;
   flex-wrap: wrap;
@@ -192,21 +216,22 @@
   margin-bottom: 30px;
   list-style-type: disclosure-closed;
 }
+
 .conversation__list li:before {
   color: red;
 }
 
 .cambridge__card.individuals {
   height: 300px;
-  background-image: linear-gradient(
-    180deg,
-    #40b9b9 0% 20%,
-    transparent 20% 100%
-  );
+  background-image: linear-gradient(180deg,
+      #40b9b9 0% 20%,
+      transparent 20% 100%);
 }
+
 .cambridge__card.individuals h2 {
   font-size: 1.8rem;
 }
+
 .cambridge__card.individuals button {
   margin: 50px auto;
 }
@@ -215,6 +240,7 @@
   margin: 10px auto;
   width: 150px;
 }
+
 .links__cards-container {
   display: flex;
   flex-direction: row;
@@ -223,6 +249,7 @@
   gap: 20px;
   flex-wrap: wrap;
 }
+
 .links .link__card {
   border-radius: 30px;
   box-shadow: 2px 2px 5px;
@@ -234,14 +261,17 @@
   justify-content: start;
   position: relative;
 }
+
 .links .link__card p {
   width: 300px;
   font-family: "segoe", sans-serif;
   margin: 15px auto;
 }
+
 .links .link__card h4 {
   text-transform: uppercase;
 }
+
 .links .link__card a {
   text-decoration: none;
   padding: 0.7rem 2rem;
@@ -263,6 +293,7 @@
   left: -285px;
   transition: transform 1s ease-in-out;
 }
+
 .dropdown__list {
   margin: 135px 20px;
   list-style: none;
@@ -271,9 +302,11 @@
   grid-template-rows: repeat(6, 40px);
   align-items: start;
 }
+
 .dropdown__list li {
   margin: 5px 0;
 }
+
 .dropdown__list li a {
   color: #706f6f;
   text-decoration: none;
@@ -282,12 +315,14 @@
   white-space: nowrap;
   transition: all 0.3s ease-in-out;
 }
+
 .dropdown__list li a:hover,
 .dropdown__list li a:active {
   font-size: 1.1em;
   color: #e2318a;
   transition: all 0.1s ease-in-out;
 }
+
 .dropdown__list--more {
   font-size: 0.9rem;
   font-family: "segoe", sans-serif;
@@ -296,6 +331,7 @@
   padding: 1px 30px;
   white-space: nowrap;
 }
+
 .dropdown__list-open {
   margin: 135px 20px;
   list-style: none;
@@ -331,6 +367,7 @@
   gap: 25px;
   flex-wrap: wrap;
 }
+
 .courses__description--tittle {
   display: flex;
   flex-direction: row;
@@ -341,12 +378,15 @@
   font-size: 2rem;
   text-transform: uppercase;
 }
+
 .courses__description--tittle h2 {
   color: #e2318a;
 }
+
 .courses__description--tittle img {
   width: 150px;
 }
+
 .courses__description--card {
   display: flex;
   flex-direction: column;
@@ -361,38 +401,45 @@
   border-radius: 30px;
   align-content: center;
 }
+
 .courses__description--card .btn,
 .courses__description--card .links .link__card a,
 .links .link__card .courses__description--card a {
   margin: 0 0 20px;
 }
+
 .courses__description--list {
   font-family: "segoe";
   width: 80%;
   margin-bottom: 15px;
 }
+
 .courses__description--price {
   display: grid;
   justify-items: center;
   row-gap: 10px;
 }
+
 .courses__description--price h2 {
   font-family: "roboto bold";
   font-size: 2.3rem;
   line-height: 20px;
   margin-bottom: 40px;
 }
+
 .courses__description--price h2 span {
   font-family: "roboto thin";
   font-size: 1rem;
   padding-left: 10px;
 }
+
 .courses__description--price .paragraph {
   font-family: "segoe";
   width: 70%;
   text-align: center;
   margin: 0px 0;
 }
+
 .courses__description--price .price-container {
   display: flex;
   flex-direction: row;
@@ -405,13 +452,16 @@
   box-shadow: 2px 2px 5px;
   margin: 5px auto;
 }
+
 .courses__description--price .price-container p {
   font-family: "segoe";
 }
+
 .courses__description--price .price-container span {
   font-size: 1.2rem;
   font-weight: 600;
 }
+
 .courses__description--price .price-container button {
   margin-right: 25px;
   background-color: transparent;
@@ -419,6 +469,7 @@
   font-size: 1.4rem;
   cursor: pointer;
 }
+
 .courses__description--price .btn-container {
   display: flex;
   flex-direction: row;
@@ -427,14 +478,17 @@
   gap: 0;
   width: 80%;
 }
+
 .courses__description--price .btn-container .btn,
 .courses__description--price .btn-container .links .link__card a,
 .links .link__card .courses__description--price .btn-container a {
   margin: 3em 0.5em 0 0.5em;
 }
+
 .courses__description--price .checkbox {
   padding-top: 0px;
 }
+
 .courses__description--price .checkbox span {
   font-family: "segoe";
   font-size: 0.9rem;
@@ -455,6 +509,7 @@
   border-radius: 30px;
   align-content: center;
 }
+
 #prices h2,
 #schedule h2 {
   font-family: "roboto bold";
@@ -462,6 +517,7 @@
   line-height: 20px;
   margin: 20px 0;
 }
+
 #prices img,
 #schedule img {
   width: 100px;
@@ -471,13 +527,16 @@
   color: #e2318a;
   font-size: 2.3rem;
 }
+
 #schedule .sc2 {
   font-size: 2rem;
   color: #706f6f;
 }
+
 #schedule .sc3 {
   font-size: 1.8rem;
 }
+
 #schedule .price-container {
   display: flex;
   flex-direction: row;
@@ -501,12 +560,11 @@
   grid-template-columns: repeat(6, 55.83px);
   grid-template-rows: repeat(3, 80px);
   grid-template-areas: "tittle tittle tittle names names names" "specs specs specs specs imgBtn imgBtn" "specs specs specs specs imgBtn imgBtn";
-  background-image: linear-gradient(
-    180deg,
-    #40b9b9 0% 38%,
-    transparent 38% 100%
-  );
+  background-image: linear-gradient(180deg,
+      #40b9b9 0% 38%,
+      transparent 38% 100%);
 }
+
 .card0__tittle,
 .card1__tittle,
 .card2__tittle,
@@ -514,6 +572,7 @@
   grid-area: tittle;
   padding-right: 1em;
 }
+
 .card0__tittle--one,
 .card1__tittle--one,
 .card2__tittle--one,
@@ -524,6 +583,7 @@
   text-transform: uppercase;
   text-align: end;
 }
+
 .card0__tittle--two,
 .card1__tittle--two,
 .card2__tittle--two,
@@ -533,12 +593,14 @@
   text-transform: uppercase;
   text-align: end;
 }
+
 .card0__type,
 .card1__type,
 .card2__type,
 .card__type {
   grid-area: tittle;
 }
+
 .card0__course-names,
 .card1__course-names,
 .card2__course-names,
@@ -546,12 +608,14 @@
   grid-area: names;
   position: relative;
 }
+
 .card0__course-names img,
 .card1__course-names img,
 .card2__course-names img,
 .card__course-names img {
   width: 146px;
 }
+
 .card0__course-names span,
 .card1__course-names span,
 .card2__course-names span,
@@ -562,6 +626,7 @@
   font-size: 1.4rem;
   text-transform: uppercase;
 }
+
 .card0 ul,
 .card1 ul,
 .card2 ul,
@@ -571,6 +636,7 @@
   padding: 20px 35px;
   font-family: "segoe", sans-serif;
 }
+
 .card0__img-btn,
 .card1__img-btn,
 .card2__img-btn,
@@ -582,6 +648,7 @@
   gap: 0;
   grid-area: imgBtn;
 }
+
 .card0__img-btn img,
 .card1__img-btn img,
 .card2__img-btn img,
@@ -590,6 +657,7 @@
   place-self: flex-start;
   margin-top: 15px;
 }
+
 .card0__img-btn button,
 .card1__img-btn button,
 .card2__img-btn button,
@@ -621,11 +689,13 @@
   box-shadow: 2px 2px 5px;
   position: relative;
 }
+
 .courses__card-header {
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, 50px);
 }
+
 .courses img {
   grid-row: -3/-1;
   grid-column: 2/3;
@@ -633,6 +703,7 @@
   justify-self: center;
   align-self: center;
 }
+
 .courses h4 {
   font-family: "Roboto bold";
   font-size: 2rem;
@@ -641,15 +712,18 @@
   justify-self: end;
   margin-top: 15px;
 }
+
 .courses h5 {
   font-family: "Roboto thin";
   font-size: 1.1rem;
   text-align: end;
 }
+
 .courses p {
   margin: 2em 2em;
   font-family: "segoe";
 }
+
 .courses .btn,
 .courses .links .link__card a,
 .links .link__card .courses a {
@@ -676,6 +750,7 @@
 #div2 img {
   width: 70%;
 }
+
 #div2 h4 {
   padding-left: 50px;
 }
@@ -702,9 +777,11 @@ main {
   align-items: center;
   gap: 0;
 }
+
 .tittle #courses__btn {
   text-decoration: none;
 }
+
 .tittle__first {
   font-family: "Roboto thin";
   font-size: 1rem;
@@ -713,6 +790,7 @@ main {
   margin-left: 20px;
   padding-right: 87px;
 }
+
 .tittle__main {
   font-family: "Roboto bold";
   font-size: 4.3rem;
@@ -720,29 +798,36 @@ main {
   font-weight: bolder;
   padding-right: 45px;
 }
+
 .tittle__main.general {
   font-size: 3rem;
 }
+
 .tittle__main--two {
   font-family: "Roboto thin";
   font-size: 3.5rem;
 }
+
 .tittle__main--two.general {
   font-size: 2rem;
   margin-bottom: 1em;
 }
+
 .tittle__main--two.cambridge {
   font-size: 1.5rem;
   text-align: center;
 }
+
 .tittle__main--two.links__tittle {
   font-size: 2.5rem;
 }
+
 .tittle__span {
   font-family: "Roboto light";
   padding-left: 50px;
   font-size: 1.1rem;
 }
+
 .tittle__paragraph,
 .courses__paragraph {
   font-family: "segoe", sans-serif;
@@ -753,10 +838,12 @@ main {
   color: #3d3d3d;
   place-self: center;
 }
+
 .tittle__paragraph a,
 .courses__paragraph a {
   color: #40b9b9;
 }
+
 .tittle img {
   width: 350px;
   place-self: center;
@@ -802,6 +889,7 @@ nav {
 .courses {
   width: 100%;
 }
+
 .courses__cards {
   display: flex;
   flex-direction: row;
@@ -810,6 +898,7 @@ nav {
   gap: 5px;
   flex-wrap: wrap;
 }
+
 .courses__main {
   display: flex;
   flex-direction: column;
@@ -817,10 +906,12 @@ nav {
   align-items: center;
   gap: 0;
 }
+
 .courses__main img {
   width: 130px;
   margin: 30px 0 30px 0;
 }
+
 .courses__tittle {
   font-family: "Roboto bold";
   font-size: 3rem;
@@ -828,16 +919,19 @@ nav {
   margin: 10px 30px 0 0;
   text-transform: capitalize;
 }
+
 .courses__span {
   font-family: "Roboto thin";
   font-size: 1.5rem;
   place-self: end;
   margin: 0 30px 30px 0;
 }
+
 .courses__span em {
   font-style: unset;
   color: #e2318a;
 }
+
 .courses__levels {
   width: 90%;
   margin: 0 auto;
@@ -852,12 +946,14 @@ nav {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 .learn__bg {
   width: 100vw;
   position: absolute;
   left: 0px;
   z-index: -1;
 }
+
 .learn article {
   display: flex;
   flex-direction: column;
@@ -865,6 +961,7 @@ nav {
   align-items: center;
   gap: 0;
 }
+
 .learn__tittles {
   display: flex;
   flex-direction: row;
@@ -873,16 +970,20 @@ nav {
   gap: 0;
   margin-top: 20px;
 }
+
 .learn__tittles h2 {
   font-size: 3rem;
   line-height: 31px;
 }
+
 .learn__tittles span {
   font-size: 2rem;
 }
+
 .learn__tittles--chat {
   width: 60px;
 }
+
 .learn p {
   font-family: "segoe", sans-serif;
   font-size: 1.1rem;
@@ -904,16 +1005,19 @@ nav {
   position: relative;
   overflow: hidden;
 }
+
 .about-us__bg {
   position: absolute;
   transform: scale(-1, 1) translate(-750px, -225px);
   z-index: -1;
 }
+
 .about-us h2 {
   color: #40b9b9;
   font-family: "roboto";
   font-size: 2.5rem;
 }
+
 .about-us__luana {
   display: flex;
   flex-direction: row;
@@ -921,18 +1025,22 @@ nav {
   align-items: center;
   gap: 0;
 }
+
 .about-us__luana--photo {
   width: 187px;
   padding: 2em 0.5em 1em 1em;
   place-self: flex-start;
 }
+
 .about-us__luana p {
   width: 187px;
   padding: 0.5em 1em 0.5em 0.5em;
 }
+
 .about-us__luana p:nth-child(1) {
   color: #e2318a;
 }
+
 .about-us__luana--arrow {
   width: 110px;
   position: absolute;
@@ -940,6 +1048,7 @@ nav {
   left: 75px;
   transform: rotate(30deg);
 }
+
 .about-us__emilia {
   display: flex;
   flex-direction: row;
@@ -947,18 +1056,22 @@ nav {
   align-items: center;
   gap: 0;
 }
+
 .about-us__emilia--photo {
   width: 187px;
   padding: 2em 1em 1em 0.5em;
   place-self: flex-start;
 }
+
 .about-us__emilia p {
   width: 187px;
   padding: 0.5em 0.1em 0.5em 1em;
 }
+
 .about-us__emilia p:nth-child(1) {
   color: #e2318a;
 }
+
 .about-us__arrow {
   width: 110px;
   position: absolute;
@@ -975,19 +1088,23 @@ nav {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 .footer__bg {
   width: 1200px;
   position: absolute;
   z-index: -1;
   overflow-x: hidden;
 }
+
 .footer__logo {
   width: 350px;
   margin: 0px auto;
 }
+
 .footer__logo img {
   width: 100%;
 }
+
 .footer__info {
   display: flex;
   flex-direction: column;
@@ -996,15 +1113,18 @@ nav {
   gap: 0;
   background-color: #40b9b9;
 }
+
 .footer__info img {
   width: 100px;
   cursor: pointer;
 }
+
 .footer__info span {
   font-family: "Segoe UI", "segoe", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5em;
   color: #3d3d3d;
 }
+
 .footer__info--tittle {
   font-family: "Roboto medium";
   font-size: 2rem;
@@ -1012,13 +1132,16 @@ nav {
   text-transform: capitalize;
   color: #fbe800;
 }
+
 .footer__info--tittle:nth-of-type(3) {
   margin: 1em 0;
 }
+
 .footer__links {
   list-style-type: none;
   margin-bottom: 2em;
 }
+
 .footer__links--item {
   font-family: "Segoe UI", "segoe", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5em;
@@ -1027,6 +1150,7 @@ nav {
   line-height: 1.5em;
   color: #3d3d3d;
 }
+
 .footer__end {
   height: 25px;
   display: flex;
@@ -1035,22 +1159,27 @@ nav {
   align-items: center;
   gap: 5px;
 }
+
 .footer__end p {
   color: #3d3d3d;
 }
+
 .footer__media {
   display: grid;
   grid-template-columns: repeat(2, auto);
 }
+
 /* LOGIN and manage*/
 .sched-container {
   margin: 10px;
   max-width: 330px;
 }
+
 .course__sched {
   display: flex;
   flex-direction: column;
 }
+
 /* LOGIN and manage*/
 
 @media (min-width: 768px) {
@@ -1058,10 +1187,12 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
   }
+
   nav {
     height: 142px;
   }
 }
+
 @media (min-width: 992px) {
   .about-us__container {
     display: flex;
@@ -1070,30 +1201,37 @@ nav {
     align-items: center;
     gap: 50px;
   }
+
   .about-us__arrow {
     top: 29px;
     left: 651px;
     transform: scale(-1, -1) rotate(5deg);
   }
+
   .about-us__luana {
     gap: 50px;
   }
+
   .about-us__emilia {
     gap: 50px;
   }
+
   nav {
     background-position: bottom;
   }
 }
+
 @media (min-width: 1296px) {
   #dropdownIcon {
     display: none;
   }
+
   nav {
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 100px;
   }
+
   .nav-container ul {
     display: flex;
     flex-direction: row;
@@ -1105,6 +1243,7 @@ nav {
     font-size: 2rem;
     text-transform: capitalize;
   }
+
   .nav-container ul li {
     color: #706f6f;
   }

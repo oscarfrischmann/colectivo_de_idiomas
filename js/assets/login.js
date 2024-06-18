@@ -56,7 +56,7 @@ async function publishGeneralCoursesPricesDB(e) {
   }
 }
 pricesFormDB.addEventListener("submit", await publishGeneralCoursesPricesDB);
-
+console.log("Desde LOGIN bla");
 async function getPrices() {
   try {
     const pricesCol = doc(db, "prices", "generalCourses");
@@ -237,6 +237,7 @@ async function getCambSchedule() {
       "coursesScheduleCamb"
     );
     const courseSshedulesSnapshot = await getDoc(courseSshedulesCol);
+
     const courseSshedulesList = courseSshedulesSnapshot.data();
     return courseSshedulesList;
   } catch (err) {

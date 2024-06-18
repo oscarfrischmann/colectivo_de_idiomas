@@ -23,6 +23,7 @@ priceCamb.innerHTML = `
 </div>
 	`;
 console.log(login.cambScheduleDB2);
+
 const schedule = document.getElementById("scheduleCamb");
 login.cambScheduleDB2.cambSchedule.forEach((courses, i) => {
   schedule.innerHTML += `

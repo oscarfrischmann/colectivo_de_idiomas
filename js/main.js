@@ -18,4 +18,6 @@ let conversationPriceUSD = 1000 + " USD";
 let conversationPriceUSDFull = 100 + " USD";
 
 const button = document.getElementById("individualsWasapBtn");
-button.addEventListener("click", () => openWasap());
+if (button) {
+  button.addEventListener("click", () => openWasap());
+}

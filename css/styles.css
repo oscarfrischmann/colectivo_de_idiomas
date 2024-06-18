@@ -686,6 +686,7 @@
 #scheduleCamb .sc2 {
   font-size: 2rem;
   color: #706f6f;
+  text-wrap: nowrap;
 }
 
 #schedule .sc3,
@@ -699,7 +700,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 8px;
 }
 
 .card0,
@@ -881,6 +882,7 @@
 .courses p {
   margin: 2em 2em;
   font-family: "segoe";
+  font-size: 1.05em;
 }
 
 .courses .btn,
@@ -1145,7 +1147,7 @@ nav {
 
 .learn p {
   font-family: "segoe", sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.9em;
   width: 330px;
   color: white;
   background-color: #40b9b9;
@@ -1280,10 +1282,14 @@ nav {
 
 .footer__info span {
   font-family: "Segoe UI", "segoe", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.5em;
   color: #3d3d3d;
 }
-
+.footer__info--item {
+  font-size: 1.5em;
+}
+.footer__info--item.email {
+  font-size: 1em !important;
+}
 .footer__info--tittle {
   font-family: "Roboto medium";
   font-size: 2rem;
@@ -1303,7 +1309,7 @@ nav {
 
 .footer__links--item {
   font-family: "Segoe UI", "segoe", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   text-transform: capitalize;
   text-align: center;
   line-height: 1.5em;

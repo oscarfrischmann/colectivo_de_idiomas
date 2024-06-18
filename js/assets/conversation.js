@@ -1,2 +1,3 @@
-"use strict";
-import * as login from "./login.js";
+import { pricesDB } from "./login.js";
+
+console.log("bla bla");

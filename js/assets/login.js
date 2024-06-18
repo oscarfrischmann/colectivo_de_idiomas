@@ -55,7 +55,9 @@ async function publishGeneralCoursesPricesDB(e) {
     throw new Error("puclishCoursePricesDB", err);
   }
 }
-pricesFormDB.addEventListener("submit", await publishGeneralCoursesPricesDB);
+if (pricesFormDB) {
+  pricesFormDB.addEventListener("submit", await publishGeneralCoursesPricesDB);
+}
 console.log("Desde LOGIN bla");
 async function getPrices() {
   try {
@@ -74,58 +76,62 @@ export const pricesDB = await getPrices();
 const coursesScheduleDataDB2 = { coursesSchedule: [] };
 const coursesForm = document.getElementById("coursesScheduleDB");
 const addButton = document.getElementById("add");
-addButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  const course = {
-    name: coursesForm["name"].value,
-    date: coursesForm["date"].value,
-    day: coursesForm["day"].value,
-    time: coursesForm["time"].value,
-  };
-  coursesScheduleDataDB2.coursesSchedule.push(course);
-  console.log(coursesScheduleDataDB2);
-  const showCourses = document.createElement("div");
-  coursesForm.insertAdjacentElement("afterend", showCourses);
-  coursesScheduleDataDB2.coursesSchedule.forEach((course) => {
-    showCourses.innerHTML = `
-  ${course.name} | ${course.date} | ${course.day} | ${course.time}
-    `;
-    console.log(course);
+if (addButton) {
+  addButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const course = {
+      name: coursesForm["name"].value,
+      date: coursesForm["date"].value,
+      day: coursesForm["day"].value,
+      time: coursesForm["time"].value,
+    };
+    coursesScheduleDataDB2.coursesSchedule.push(course);
+    console.log(coursesScheduleDataDB2);
+    const showCourses = document.createElement("div");
+    coursesForm.insertAdjacentElement("afterend", showCourses);
+    coursesScheduleDataDB2.coursesSchedule.forEach((course) => {
+      showCourses.innerHTML = `
+    ${course.name} | ${course.date} | ${course.day} | ${course.time}
+      `;
+      console.log(course);
+    });
   });
-});
+}
 //*publicar Cursos Generales
 const publishSchedButton = document.getElementById("publishSchedButton");
-publishSchedButton.addEventListener("click", async (e) => {
-  e.preventDefault();
-  try {
-    await setDoc(
-      doc(db, "coursesSchedule", "coursesSchedule"),
-      coursesScheduleDataDB2
-    );
-    await sweetalert2.fire({
-      title: " Cursos generales PUBLICADOS!",
-      background: "#93E9BE",
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      width: "fit-content",
-      timer: 3000,
-      timerProgressBar: true,
-    });
-  } catch (err) {
-    sweetalert2.fire({
-      title: "ERROR!",
-      background: " #DB231C",
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      width: "fit-content",
-      timer: 3000,
-      timerProgressBar: true,
-    });
-    throw new Error("publish courses", err);
-  }
-});
+if (publishSchedButton) {
+  publishSchedButton.addEventListener("click", async (e) => {
+    e.preventDefault();
+    try {
+      await setDoc(
+        doc(db, "coursesSchedule", "coursesSchedule"),
+        coursesScheduleDataDB2
+      );
+      await sweetalert2.fire({
+        title: " Cursos generales PUBLICADOS!",
+        background: "#93E9BE",
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        width: "fit-content",
+        timer: 3000,
+        timerProgressBar: true,
+      });
+    } catch (err) {
+      sweetalert2.fire({
+        title: "ERROR!",
+        background: " #DB231C",
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        width: "fit-content",
+        timer: 3000,
+        timerProgressBar: true,
+      });
+      throw new Error("publish courses", err);
+    }
+  });
+}
 
 async function getCoursesSchedule() {
   try {
@@ -142,18 +148,20 @@ export const courseScheduleDB2 = await getCoursesSchedule();
 
 //*Clases INDIVIDUALES
 const individualCourseForm = document.getElementById("individualCourse");
-individualCourseForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  try {
-    const priceInd = {
-      priceInd: Number(individualCourseForm["individual"].value),
-    };
-    await setDoc(doc(db, "prices", "individualPrice"), priceInd);
-    return priceInd;
-  } catch (err) {
-    throw new Error("clases individuales", err);
-  }
-});
+if (individualCourseForm) {
+  individualCourseForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    try {
+      const priceInd = {
+        priceInd: Number(individualCourseForm["individual"].value),
+      };
+      await setDoc(doc(db, "prices", "individualPrice"), priceInd);
+      return priceInd;
+    } catch (err) {
+      throw new Error("clases individuales", err);
+    }
+  });
+}
 
 const priceIndDB = async () => {
   try {
@@ -174,60 +182,64 @@ console.log(newPriceIndDB);
 const cambScheduleDataDB2 = { cambSchedule: [] };
 const cambForm = document.getElementById("cambScheduleDB");
 const addCambButton = document.getElementById("addCamb");
-addCambButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  const course = {
-    name: cambForm["name"].value,
-    date: cambForm["date"].value,
-    day: cambForm["day"].value,
-    time: cambForm["time"].value,
-  };
-  cambScheduleDataDB2.cambSchedule.push(course);
-  console.log(cambScheduleDataDB2);
-  const showcamb = document.createElement("span");
-  cambForm.insertAdjacentElement("afterend", showcamb);
-  cambScheduleDataDB2.cambSchedule.forEach((course) => {
-    showcamb.innerHTML = `
-  ${course.name} | ${course.date} | ${course.day} | ${course.time}
-    `;
-    console.log(course);
+if (addCambButton) {
+  addCambButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const course = {
+      name: cambForm["name"].value,
+      date: cambForm["date"].value,
+      day: cambForm["day"].value,
+      time: cambForm["time"].value,
+    };
+    cambScheduleDataDB2.cambSchedule.push(course);
+    console.log(cambScheduleDataDB2);
+    const showcamb = document.createElement("span");
+    cambForm.insertAdjacentElement("afterend", showcamb);
+    cambScheduleDataDB2.cambSchedule.forEach((course) => {
+      showcamb.innerHTML = `
+    ${course.name} | ${course.date} | ${course.day} | ${course.time}
+      `;
+      console.log(course);
+    });
   });
-});
+}
 //*publicar cursos preparacion examenes
 const publishSchedButtonCamb = document.getElementById(
   "publishSchedButtonCamb"
 );
-publishSchedButtonCamb.addEventListener("click", async (e) => {
-  e.preventDefault();
-  try {
-    await setDoc(
-      doc(db, "coursesSchedule", "coursesScheduleCamb"),
-      cambScheduleDataDB2
-    );
-    await sweetalert2.fire({
-      title: " Cursos Cambridge PUBLICADOS!",
-      background: "#93E9BE",
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      width: "fit-content",
-      timer: 3000,
-      timerProgressBar: true,
-    });
-  } catch (err) {
-    sweetalert2.fire({
-      title: "ERROR!",
-      background: " #DB231C",
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      width: "fit-content",
-      timer: 3000,
-      timerProgressBar: true,
-    });
-    throw new Error("publish camb courses", err);
-  }
-});
+if (publishSchedButtonCamb) {
+  publishSchedButtonCamb.addEventListener("click", async (e) => {
+    e.preventDefault();
+    try {
+      await setDoc(
+        doc(db, "coursesSchedule", "coursesScheduleCamb"),
+        cambScheduleDataDB2
+      );
+      await sweetalert2.fire({
+        title: " Cursos Cambridge PUBLICADOS!",
+        background: "#93E9BE",
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        width: "fit-content",
+        timer: 3000,
+        timerProgressBar: true,
+      });
+    } catch (err) {
+      sweetalert2.fire({
+        title: "ERROR!",
+        background: " #DB231C",
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        width: "fit-content",
+        timer: 3000,
+        timerProgressBar: true,
+      });
+      throw new Error("publish camb courses", err);
+    }
+  });
+}
 
 async function getCambSchedule() {
   try {

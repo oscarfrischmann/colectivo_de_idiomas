@@ -96,18 +96,23 @@
 }
 
 .cambridge__card {
-  height: 500px;
   width: 335px;
-  margin: 0 auto 1rem auto;
+  height: 434px;
+  margin: 10px auto 0 auto;
   border-radius: 30px;
   display: grid;
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 2fr 9fr 2fr;
   box-shadow: 2px 2px 5px;
-  background-image: linear-gradient(180deg,
-      #e2318a 0% 15%,
-      transparent 15% 100%);
+  background-image: linear-gradient(
+    180deg,
+    #e2318a 0% 15%,
+    transparent 15% 100%
+  );
+}
+#pricesCamb {
+  background-image: none;
 }
 
 .cambridge__card h2 {
@@ -117,6 +122,8 @@
   grid-column: 1/3;
   grid-row: 1/2;
   padding-right: 100px;
+  padding-top: 5px;
+  line-height: 0.9;
 }
 
 .cambridge__card ul {
@@ -223,9 +230,11 @@
 
 .cambridge__card.individuals {
   height: 300px;
-  background-image: linear-gradient(180deg,
-      #40b9b9 0% 20%,
-      transparent 20% 100%);
+  background-image: linear-gradient(
+    180deg,
+    #40b9b9 0% 20%,
+    transparent 20% 100%
+  );
 }
 
 .cambridge__card.individuals h2 {
@@ -495,7 +504,9 @@
 }
 
 #prices,
-#schedule {
+#schedule,
+#pricesCamb,
+#scheduleCamb {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -511,7 +522,8 @@
 }
 
 #prices h2,
-#schedule h2 {
+#schedule h2,
+#scheduleCamb h2 {
   font-family: "roboto bold";
   font-size: 2.3rem;
   line-height: 20px;
@@ -519,25 +531,30 @@
 }
 
 #prices img,
-#schedule img {
+#schedule img,
+#scheduleCamb img {
   width: 100px;
 }
 
-#schedule .sc1 {
+#schedule .sc1,
+#scheduleCamb .sc1 {
   color: #e2318a;
   font-size: 2.3rem;
 }
 
-#schedule .sc2 {
+#schedule .sc2,
+#scheduleCamb .sc2 {
   font-size: 2rem;
   color: #706f6f;
 }
 
-#schedule .sc3 {
+#schedule .sc3,
+#scheduleCamb .sc3 {
   font-size: 1.8rem;
 }
 
-#schedule .price-container {
+#schedule .price-container,
+#scheduleCamb .price-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -560,9 +577,11 @@
   grid-template-columns: repeat(6, 55.83px);
   grid-template-rows: repeat(3, 80px);
   grid-template-areas: "tittle tittle tittle names names names" "specs specs specs specs imgBtn imgBtn" "specs specs specs specs imgBtn imgBtn";
-  background-image: linear-gradient(180deg,
-      #40b9b9 0% 38%,
-      transparent 38% 100%);
+  background-image: linear-gradient(
+    180deg,
+    #40b9b9 0% 38%,
+    transparent 38% 100%
+  );
 }
 
 .card0__tittle,
@@ -1170,14 +1189,21 @@ nav {
 }
 
 /* LOGIN and manage*/
-.sched-container {
+.sched-container,
+.sched-container.camb {
   margin: 10px;
   max-width: 330px;
 }
 
-.course__sched {
+.course__sched,
+.sched-container.camb {
   display: flex;
   flex-direction: column;
+}
+
+.login div {
+  border: 1px solid;
+  padding: 15px;
 }
 
 /* LOGIN and manage*/

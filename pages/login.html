@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Colectivo Login</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/styles.css" />
-  <title>Colectivo Login</title>
-</head>
-
-<body class="login">
-  <div class="login__buttons">
-    <button class="login__button login__button-iniciar" id="googleLogIn">
-      iniciar sesión
-    </button>
-    <button class="login__button login__button-cerrar" id="googleLogOut">
-      cerrar sesión
-    </button>
-  </div>
-  <div class="pricesDB sched-container">
-    <h2>Precios Cursos de Ingles General</h2>
-    <form id="pricesFormDB" class="course__sched">
-      <label for="monthlyPay">Valor pago mensual:</label>
-      <input type="number" name="monthlyPay" id="monthlyPay" />
-      <label for="coursePay">Valor pago mensual:</label>
-      <input type="number" name="coursePay" id="coursePay" />
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-  <div class="sched-container">
-    <h2>Agregar Cursos de Ingles General</h2>
-    <form id="coursesScheduleDB" class="course__sched">
-      <label for="name">Cusrso:</label>
-      <input type="text" name="name" id="name" />
-      <label for="date">Fecha:</label>
-      <input type="text" name="date" id="date" />
-      <label for="day">Dia:</label>
-      <input type="text" name="day" id="day" />
-      <label for="time">Hora:</label>
-      <input type="text" name="time" id="time" />
-      <button id="add">Agregar curso</button>
-      <button id="publishSchedButton">Publicar cursos</button>
-    </form>
-  </div>
-  <div>
-    <h2>Precios Clases Individuales</h2>
-    <form id="individualCourse">
-      <label for="individual">Precio por hora</label>
-      <input type="text" name="individual" id="individual">
-      <button type="submit">Publicar</button>
-    </form>
-
-  </div>
-  <script type="module" src="../js/assets/login.js"></script>
-</body>
-
+  <body class="login">
+    <div class="login__buttons">
+      <button class="login__button login__button-iniciar" id="googleLogIn">
+        iniciar sesión
+      </button>
+      <button class="login__button login__button-cerrar" id="googleLogOut">
+        cerrar sesión
+      </button>
+    </div>
+    <div class="pricesDB sched-container">
+      <h2>Precios Cursos de Ingles General</h2>
+      <form id="pricesFormDB" class="course__sched">
+        <label for="monthlyPay">Valor pago mensual:</label>
+        <input type="number" name="monthlyPay" id="monthlyPay" />
+        <label for="coursePay">Valor pago mensual:</label>
+        <input type="number" name="coursePay" id="coursePay" />
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+    <div class="sched-container">
+      <h2>Agregar Cursos de Ingles General</h2>
+      <form id="coursesScheduleDB" class="course__sched">
+        <label for="name">Cusrso:</label>
+        <input type="text" name="name" id="name" />
+        <label for="date">Fecha:</label>
+        <input type="text" name="date" id="date" />
+        <label for="day">Dia:</label>
+        <input type="text" name="day" id="day" />
+        <label for="time">Hora:</label>
+        <input type="text" name="time" id="time" />
+        <button id="add">Agregar curso</button>
+        <button id="publishSchedButton">Publicar cursos</button>
+      </form>
+    </div>
+    <div>
+      <h2>Precios Clases Individuales</h2>
+      <form id="individualCourse">
+        <label for="individual">Precio por hora</label>
+        <input type="text" name="individual" id="individual" />
+        <button type="submit">Publicar</button>
+      </form>
+    </div>
+    <div class="sched-container camb">
+      <h2>Agregar Cursos preparacion examenes</h2>
+      <form id="cambScheduleDB" class="course__sched camb">
+        <label for="name">Cusrso:</label>
+        <input type="text" name="name" id="name" />
+        <label for="date">Fecha:</label>
+        <input type="text" name="date" id="date" />
+        <label for="day">Dia:</label>
+        <input type="text" name="day" id="day" />
+        <label for="time">Hora:</label>
+        <input type="text" name="time" id="time" />
+        <button id="addCamb">Agregar curso</button>
+        <button id="publishSchedButtonCamb">Publicar cursos</button>
+      </form>
+    </div>
+    <script type="module" src="../js/assets/login.js"></script>
+  </body>
 </html>

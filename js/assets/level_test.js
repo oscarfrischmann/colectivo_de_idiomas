@@ -409,8 +409,6 @@ button.addEventListener('click', (e) => {
 	}
 	console.log(answers);
 });
-if ('a' === 'A') {
-	console.log('correct');
-} else {
-	console.log('incorrect');
-}
+const questionJSON = JSON.stringify(questions);
+localStorage.setItem('form', questionJSON);
+console.log(questionJSON);

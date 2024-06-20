@@ -19,7 +19,7 @@ priceCamb.innerHTML = `
 	
 		<button class="btn" onclick="openWasap()">Escribinos</button>
 	</div>
-	<span class="courses__description--test">Escribinos para solicitar un test de nivel!</span>
+	
 </div>
 	`;
 console.log(login.cambScheduleDB2);

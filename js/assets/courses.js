@@ -16,15 +16,15 @@ courses.push(
     "de inglés general",
     "./img/colectivo-amarillo.png",
     "Están divididos en niveles desde Elemental hasta Avanzado, homologados con el MCER. Cada nivel se completa al finalizar dos cuatrimestres de estudio. Cursos disponibles: Inicial, A1, A2, B1, B2, C1.",
-    "horarios"
+    "ver más"
   )
 );
 courses.push(
   new Course(
-    "cambridge",
-    "preparación de exámenes internacionales",
+    "exámenes",
+    "preparación de B2 First y C1 Advanced",
     "./img/cambridge.png",
-    "En estos cursos brindamos todas las herramientas necesarias para poder rendir los exámenes internacionales de Cambridge, FIRST y AVANCED. La preparación se completa al cabo de dos cuatrimestres de estudio. Es necesaria una evaluación de nivel previa.",
+    "En estos cursos brindamos todas las herramientas necesarias para poder rendir los exámenes internacionales de Cambridge, FIRST y AVANCED. La preparación se completa al cabo de dos cuatrimestres de estudio.",
     "ver más"
   )
 );
@@ -33,7 +33,7 @@ courses.push(
     "talleres",
     "de conversación",
     "./img/talking-color.png",
-    "Si estás buscando hablar con más fluidez, incorporar más vocabulario y poder practicar conversación en grupos reducidos, este espacio es para vos. A partir de nivel pre-intermedio hasta avanzado.",
+    "Si estás buscando hablar con más fluidez, incorporar más vocabulario y poder practicar conversación en grupos reducidos, este espacio es para vos. A partir de nivel intermedio hasta avanzado.",
     "ver más"
   )
 );
@@ -42,7 +42,7 @@ courses.push(
     "seminarios",
     "temáticos",
     "./img/avatar_ECDI_negativo_05.png",
-    "Si tenés un nivel de inglés intermedio o superior, podés participar de nuestros seminarios temáticos donde vas a poder usar el idioma para aprender sobre distintos temas. Algunas de nuestras propuestas son: inglés para viajes, inglés para el trabajo, astrología en inglés y amantes del cine.",
+    "Si tenés un nivel de inglés intermedio o superior, podés participar de nuestros seminarios temáticos donde vas a poder usar el idioma para aprender sobre distintos temas. Conocé nuestras propuestas",
     "ver más"
   )
 );

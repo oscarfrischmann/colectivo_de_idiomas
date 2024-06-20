@@ -407,8 +407,6 @@ button.addEventListener('click', (e) => {
 			}
 		}
 	}
-	console.log(answers);
+	const answersJSON = JSON.stringify(answers);
+	localStorage.setItem('form', answersJSON);
 });
-const questionJSON = JSON.stringify(questions);
-localStorage.setItem('form', questionJSON);
-console.log(questionJSON);

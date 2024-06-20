@@ -409,4 +409,5 @@ button.addEventListener('click', (e) => {
 	}
 	const answersJSON = JSON.stringify(answers);
 	localStorage.setItem('form', answersJSON);
+	console.log(answers);
 });

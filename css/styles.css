@@ -198,9 +198,11 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 2fr 9fr 2fr;
   box-shadow: 2px 2px 5px;
-  background-image: linear-gradient(180deg,
-      #e2318a 0% 15%,
-      transparent 15% 100%);
+  background-image: linear-gradient(
+    180deg,
+    #e2318a 0% 15%,
+    transparent 15% 100%
+  );
 }
 
 #pricesCamb {
@@ -322,9 +324,11 @@
 
 .cambridge__card.individuals {
   height: 300px;
-  background-image: linear-gradient(180deg,
-      #40b9b9 0% 20%,
-      transparent 20% 100%);
+  background-image: linear-gradient(
+    180deg,
+    #40b9b9 0% 20%,
+    transparent 20% 100%
+  );
 }
 
 .cambridge__card.individuals h2 {
@@ -668,9 +672,11 @@
   grid-template-columns: repeat(6, 55.83px);
   grid-template-rows: repeat(3, 80px);
   grid-template-areas: "tittle tittle tittle names names names" "specs specs specs specs imgBtn imgBtn" "specs specs specs specs imgBtn imgBtn";
-  background-image: linear-gradient(180deg,
-      #40b9b9 0% 38%,
-      transparent 38% 100%);
+  background-image: linear-gradient(
+    180deg,
+    #40b9b9 0% 38%,
+    transparent 38% 100%
+  );
 }
 
 .card0__tittle,
@@ -843,7 +849,8 @@
 
 #div0 h5,
 #div2 h5,
-#div3 h5 {
+#div3 h5,
+#div5 h5 {
   color: white;
 }
 
@@ -858,6 +865,9 @@
 
 #div2 img {
   width: 70%;
+}
+#div5 img {
+  padding: 10px;
 }
 
 #div2 h4 {
@@ -1304,83 +1314,10 @@ nav {
 }
 
 /* LOGIN and manage*/
+
 /* TEST DE NIVEL */
-/*
 .test-nivel {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
-}
-
-.container-test {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.container-test h1 {
-  text-align: center;
-  color: #333333;
-}
-
-.container-test p {
-  font-size: 1.1em;
-  color: #666666;
-  text-align: center;
-}
-
-.container-test form {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.question {
-  margin-bottom: 20px;
-}
-
-.question h2 {
-  font-size: 1.2em;
-  color: #333333;
-}
-
-.question p {
-  font-size: 1em;
-  color: #666666;
-}
-
-#quiz-formlabel {
-  display: block;
-  font-size: 1em;
-  color: #333333;
-  margin: 5px 0;
-}
-
-#quiz-form input[type="radio"] {
-  margin-right: 10px;
-}
-
-#quiz-form button {
-  align-self: center;
-  padding: 10px 20px;
-  font-size: 1em;
-  color: #ffffff;
-  background-color: #007BFF;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#quiz-form button:hover {
-  background-color: #0056b3;
-}*/
-.test-nivel {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serifS, sans-serif;
   background-color: #666666;
   margin: 0;
   padding: 0;
@@ -1401,6 +1338,11 @@ nav {
 .container-test h1 {
   text-align: center;
   color: #e2318a;
+  border-radius: 30px;
+  box-shadow: 2px 2px 5px black;
+  width: fit-content;
+  padding: 15px;
+  margin: 0 auto;
 }
 
 .container-test p {
@@ -1438,7 +1380,16 @@ nav {
   color: #333333;
   margin: 5px 30px;
 }
-
+#quiz-form img {
+  width: 25%;
+  margin: 0 auto;
+}
+#quiz-form .h2 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1em;
+  margin-top: 50px;
+}
 .first-label {
   margin-top: 15px !important;
 }
@@ -1452,7 +1403,7 @@ nav {
   padding: 10px 20px;
   font-size: 1em;
   color: #ffffff;
-  background-color: #007BFF;
+  background-color: #007bff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -1462,7 +1413,6 @@ nav {
 #quiz-form button:hover {
   background-color: #0056b3;
 }
-
 
 @media (min-width: 768px) {
   body {

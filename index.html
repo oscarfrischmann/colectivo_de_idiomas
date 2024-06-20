@@ -1,132 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>El colectivo de Idiomas</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./css/styles.css" />
-  <title>El colectivo de Idiomas</title>
-</head>
-
-<body>
-  <header>
-    <nav>
-      <i class="fas fa-solid fa-bars dropdown-icon" id="dropdownIcon"></i>
-      <img class="logo" src="img/Logo_ECDI-transparente-03-solo-nombre.png" alt="" />
-      <h1 class="clipped">El colectivo de Idiomas</h1>
-    </nav>
-    <div class="dropdown" id="dropdownContainer">
-      <ul class="dropdown__list"></ul>
-    </div>
-  </header>
-  <main>
-    <section class="tittle">
-      <h3 class="tittle__first">abierta la inscripción</h3>
-      <h2 class="tittle__main">aprendé</h2>
-      <h2 class="tittle__main--two">Inglés online</h2>
-      <span class="tittle__span">con la cercanía de lo personal</span>
-      <a href="#coursesCardContainer2" id="courses__btn" class="btn">cursos</a>
-      <p class="tittle__paragraph">
-        Orientados a que puedas desarrolar y mejorar tus habilidades para
-        comunicarte. Vas a adquirir nuevo vocabulario y a manejar con más
-        seguridad las estructuras del idioma para poder hablar con más
-        fluidez.
-        <a href="#learnSection">Click para saber más sobre cómo trabajamos.</a>
-      </p>
-      <img src="img/Logo_ECDI-transparente-02-solo-caras.png" alt="Logo de El Colectivo de Idiomas" />
-    </section>
-    <section class="courses">
-      <div id="coursesCardContainer2"></div>
-      <article class="courses__cards" id="coursesCardContainer"></article>
-      <article class="courses__levels" id="cardContainer"></article>
-    </section>
-    <section class="learn" id="learnSection">
-      <!-- <img class="learn__bg" src="./img/violeta.png" alt="" id="learnSection" /> -->
-      <article>
-        <div class="learn__tittles">
-          <h2>¿Cómo<br /><span> trabajamos?</span></h2>
-          <div>
-            <img class="learn__tittles--chat" src="./img/perfil-vacio.png" alt="" />
-            <img class="learn__tittles--chat" src="./img/perfil-relleno.png" alt="" />
-          </div>
-        </div>
-        <p>
-          En nuestras clases utilizamos el método comunicativo para enseñar
-          idiomas. Este enfoque se centra en desarrollar las habilidades
-          expresivas a través de la práctica oral y escrita, y las habilidades
-          de comprensión a través de la escucha y la lectura, lo que permite
-          adquirir confianza en el uso del idioma en situaciones cotidianas.
-          <br />También creemos en los enormes beneficios del aprendizaje en
-          grupo, donde a través del intercambio se genera la posibilidad del
-          aprendizaje colaborativo.
+  <body>
+    <header>
+      <nav>
+        <i class="fas fa-solid fa-bars dropdown-icon" id="dropdownIcon"></i>
+        <img
+          class="logo"
+          src="img/Logo_ECDI-transparente-03-solo-nombre.png"
+          alt=""
+        />
+        <h1 class="clipped">El colectivo de Idiomas</h1>
+      </nav>
+      <div class="dropdown" id="dropdownContainer">
+        <ul class="dropdown__list"></ul>
+      </div>
+    </header>
+    <main>
+      <section class="tittle">
+        <h3 class="tittle__first">abierta la inscripción</h3>
+        <h2 class="tittle__main">aprendé</h2>
+        <h2 class="tittle__main--two">Inglés online</h2>
+        <span class="tittle__span">con la cercanía de lo personal</span>
+        <a href="#coursesCardContainer2" id="courses__btn" class="btn"
+          >cursos</a
+        >
+        <p class="tittle__paragraph">
+          Orientados a que puedas desarrolar y mejorar tus habilidades para
+          comunicarte. Vas a adquirir nuevo vocabulario y a manejar con más
+          seguridad las estructuras del idioma para poder hablar con más
+          fluidez.
+          <a href="#learnSection"
+            >Click para saber más sobre cómo trabajamos.</a
+          >
+          También ofrecemos un
+          <a href="./pages/test-de-nivel.html">test de nivel</a> online y
+          gratuito para ayudarte a elegir el mejor curso para vos.
         </p>
-      </article>
-    </section>
-    <section class="about-us" id="aboutUs">
-      <h2>¿Quiénes somos?</h2>
-      <img class="about-us__bg" src="./img/amarillo_top.png" alt="" />
-      <div class="about-us__container">
-        <arcticle class="about-us__luana">
-          <img class="about-us__luana--photo" src="./img/luana.png" alt="" />
-          <div>
-            <p>
-              Luana Luxardo, soy profesora de inglés egresada del ISP Joaquín
-              V. González y examinadora de los exámenes internacionales de
-              Cambridge. Soy también Lic. en Educación de la UVQ.
-            </p>
-            <p>
-              Doy clases a adolescentes y adultos hace más de 20 años en
-              distintos ámbitos. Desde el 2019 me especializo en dictar clases
-              en modalidad online.
-            </p>
+        <img
+          src="img/Logo_ECDI-transparente-02-solo-caras.png"
+          alt="Logo de El Colectivo de Idiomas"
+        />
+      </section>
+      <section class="courses">
+        <div id="coursesCardContainer2"></div>
+        <article class="courses__cards" id="coursesCardContainer"></article>
+        <article class="courses__levels" id="cardContainer"></article>
+      </section>
+      <section class="learn" id="learnSection">
+        <!-- <img class="learn__bg" src="./img/violeta.png" alt="" id="learnSection" /> -->
+        <article>
+          <div class="learn__tittles">
+            <h2>¿Cómo<br /><span> trabajamos?</span></h2>
+            <div>
+              <img
+                class="learn__tittles--chat"
+                src="./img/perfil-vacio.png"
+                alt=""
+              />
+              <img
+                class="learn__tittles--chat"
+                src="./img/perfil-relleno.png"
+                alt=""
+              />
+            </div>
           </div>
-          <img class="about-us__luana--arrow" src="./img/flecha.png" alt="" />
-        </arcticle>
+          <p>
+            En nuestras clases utilizamos el método comunicativo para enseñar
+            idiomas. Este enfoque se centra en desarrollar las habilidades
+            expresivas a través de la práctica oral y escrita, y las habilidades
+            de comprensión a través de la escucha y la lectura, lo que permite
+            adquirir confianza en el uso del idioma en situaciones cotidianas.
+            <br />También creemos en los enormes beneficios del aprendizaje en
+            grupo, donde a través del intercambio se genera la posibilidad del
+            aprendizaje colaborativo.
+          </p>
+        </article>
+      </section>
+      <section class="about-us" id="aboutUs">
+        <h2>¿Quiénes somos?</h2>
+        <img class="about-us__bg" src="./img/amarillo_top.png" alt="" />
+        <div class="about-us__container">
+          <arcticle class="about-us__luana">
+            <img class="about-us__luana--photo" src="./img/luana.png" alt="" />
+            <div>
+              <p>
+                Luana Luxardo, soy profesora de inglés egresada del ISP Joaquín
+                V. González y examinadora de los exámenes internacionales de
+                Cambridge. Soy también Lic. en Educación de la UVQ.
+              </p>
+              <p>
+                Doy clases a adolescentes y adultos hace más de 20 años en
+                distintos ámbitos. Desde el 2019 me especializo en dictar clases
+                en modalidad online.
+              </p>
+            </div>
+            <img class="about-us__luana--arrow" src="./img/flecha.png" alt="" />
+          </arcticle>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <!-- <img class="footer__bg" src="./img/violeta.png" alt="" /> -->
+      <div class="footer__logo">
+        <img src="./img/Logo_ECDI-transparente.png" alt="" />
       </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <!-- <img class="footer__bg" src="./img/violeta.png" alt="" /> -->
-    <div class="footer__logo">
-      <img src="./img/Logo_ECDI-transparente.png" alt="" />
-    </div>
-    <div class="footer__info">
-      <h3 class="footer__info--tittle">contacto</h3>
-      <span class="footer__info--item" style="white-space: nowrap">lunes / viernes: 8 a 20hs</span>
-      <span class="footer__info--item" style="white-space: nowrap">+54 9 11 3285 0921</span>
-      <span class="footer__info--item email">info@elcolectivodeidiomas.com</span>
-      <h3 class="footer__info--tittle" style="white-space: nowrap">
-        Redes sociales
-      </h3>
-      <div class="footer__media">
-        <a href="https://wa.me/5491132850921?text=Hola!%20Quisiera%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20ingles."
-          target="_blank"><img src="./img/whatsapp-rosa.png" alt="" /></a>
-        <a href="https://www.instagram.com/elcolectivodeidiomas/" target="_blank"><img src="./img/ig.png" alt="" /></a>
-        <a href="https://www.facebook.com/profile.php?id=100090341718972" target="_blank"><img
-            src="./img/facebook.white.png" alt="" /></a>
-        <a href="mailto:info@elcolectivodeidiomas.com"><img src="./img/mailto.grey.png" alt="" /></a>
+      <div class="footer__info">
+        <h3 class="footer__info--tittle">contacto</h3>
+        <span class="footer__info--item" style="white-space: nowrap"
+          >lunes / viernes: 8 a 20hs</span
+        >
+        <span class="footer__info--item" style="white-space: nowrap"
+          >+54 9 11 3285 0921</span
+        >
+        <span class="footer__info--item email"
+          >info@elcolectivodeidiomas.com</span
+        >
+        <h3 class="footer__info--tittle" style="white-space: nowrap">
+          Redes sociales
+        </h3>
+        <div class="footer__media">
+          <a
+            href="https://wa.me/5491132850921?text=Hola!%20Quisiera%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20ingles."
+            target="_blank"
+            ><img src="./img/whatsapp-rosa.png" alt=""
+          /></a>
+          <a
+            href="https://www.instagram.com/elcolectivodeidiomas/"
+            target="_blank"
+            ><img src="./img/ig.png" alt=""
+          /></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100090341718972"
+            target="_blank"
+            ><img src="./img/facebook.white.png" alt=""
+          /></a>
+          <a href="mailto:info@elcolectivodeidiomas.com"
+            ><img src="./img/mailto.grey.png" alt=""
+          /></a>
+        </div>
+        <h3 class="footer__info--tittle">enlaces rápidos</h3>
+        <ul class="footer__links">
+          <li class="footer__links--item">home</li>
+          <li class="footer__links--item">quienes somos</li>
+          <li class="footer__links--item">cursos</li>
+          <li class="footer__links--item">precios</li>
+          <li class="footer__links--item">freebies</li>
+        </ul>
       </div>
-      <h3 class="footer__info--tittle">enlaces rápidos</h3>
-      <ul class="footer__links">
-        <li class="footer__links--item">home</li>
-        <li class="footer__links--item">quienes somos</li>
-        <li class="footer__links--item">cursos</li>
-        <li class="footer__links--item">precios</li>
-        <li class="footer__links--item">freebies</li>
-      </ul>
-    </div>
-    <div class="footer__end">
-      <p>developed by</p>
-      <p>OF</p>
-      <p>frontend</p>
-    </div>
-  </footer>
-  <script src="./js/assets/dropdown_nav.js"></script>
-  <script src="./js/assets/courses.js"></script>
-  <script src="./js/main.js"></script>
-</body>
-
+      <div class="footer__end">
+        <p>developed by</p>
+        <p>OF</p>
+        <p>frontend</p>
+      </div>
+    </footer>
+    <script src="./js/assets/dropdown_nav.js"></script>
+    <script src="./js/assets/courses.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>

@@ -4,6 +4,7 @@
   color: #000000;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @font-face {
@@ -198,11 +199,9 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 2fr 9fr 2fr;
   box-shadow: 2px 2px 5px;
-  background-image: linear-gradient(
-    180deg,
-    #e2318a 0% 15%,
-    transparent 15% 100%
-  );
+  background-image: linear-gradient(180deg,
+      #e2318a 0% 15%,
+      transparent 15% 100%);
 }
 
 #pricesCamb {
@@ -324,11 +323,9 @@
 
 .cambridge__card.individuals {
   height: 300px;
-  background-image: linear-gradient(
-    180deg,
-    #40b9b9 0% 20%,
-    transparent 20% 100%
-  );
+  background-image: linear-gradient(180deg,
+      #40b9b9 0% 20%,
+      transparent 20% 100%);
 }
 
 .cambridge__card.individuals h2 {
@@ -672,11 +669,9 @@
   grid-template-columns: repeat(6, 55.83px);
   grid-template-rows: repeat(3, 80px);
   grid-template-areas: "tittle tittle tittle names names names" "specs specs specs specs imgBtn imgBtn" "specs specs specs specs imgBtn imgBtn";
-  background-image: linear-gradient(
-    180deg,
-    #40b9b9 0% 38%,
-    transparent 38% 100%
-  );
+  background-image: linear-gradient(180deg,
+      #40b9b9 0% 38%,
+      transparent 38% 100%);
 }
 
 .card0__tittle,
@@ -866,6 +861,7 @@
 #div2 img {
   width: 70%;
 }
+
 #div5 img {
   padding: 10px;
 }
@@ -1203,9 +1199,9 @@ nav {
   width: 100%;
   margin: 3em 0 0 0;
   overflow: hidden;
-  background-image: url(../img/violeta.png);
+  /* background-image: url(../img/violeta.png);
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .footer__bg {
@@ -1231,6 +1227,10 @@ nav {
   align-items: center;
   gap: 0;
   background-color: #40b9b9;
+  background: -moz-linear-gradient(90deg, rgba(64, 185, 185, 1) 0%, rgba(64, 185, 185, 0.6671043417366946) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(64, 185, 185, 1) 0%, rgba(64, 185, 185, 0.6671043417366946) 100%);
+  background: linear-gradient(90deg, rgba(64, 185, 185, 1) 0%, rgba(64, 185, 185, 0.6671043417366946) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#40b9b9", endColorstr="#40b9b9", GradientType=1);
 }
 
 .footer__info img {
@@ -1259,9 +1259,16 @@ nav {
   color: #fbe800;
 }
 
-.footer__info--tittle:nth-of-type(3) {
-  margin: 1em 0;
+.footer__contacto,
+.footer__contacto div {
+  display: flex;
+  flex-direction: column;
 }
+
+.footer__contacto h3 {
+  text-align: center;
+}
+
 
 .footer__links {
   list-style-type: none;
@@ -1295,6 +1302,10 @@ nav {
   grid-template-columns: repeat(2, auto);
 }
 
+.footer__media a {
+  place-self: center;
+}
+
 /* LOGIN and manage*/
 .sched-container,
 .sched-container.camb {
@@ -1318,14 +1329,14 @@ nav {
 /* TEST DE NIVEL */
 .test-nivel {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serifS, sans-serif;
-  background-color: #666666;
-  margin: 0;
+  /* background-color: #666666; */
+  margin: 0 auto;
   padding: 0;
 }
 
 .container-test {
   max-width: 800px;
-  margin: 50px auto;
+  margin: 0 auto 50px auto;
   padding: 20px;
   background-color: #ffffff;
   border-radius: 8px;
@@ -1380,16 +1391,19 @@ nav {
   color: #333333;
   margin: 5px 30px;
 }
+
 #quiz-form img {
   width: 25%;
   margin: 0 auto;
 }
+
 #quiz-form .h2 {
   text-align: center;
   margin: 0 auto;
   font-size: 1em;
   margin-top: 50px;
 }
+
 .first-label {
   margin-top: 15px !important;
 }
@@ -1426,6 +1440,33 @@ nav {
 }
 
 @media (min-width: 992px) {
+  .footer__info {
+    flex-direction: row;
+    padding: 20px 0;
+    align-items: flex-start;
+  }
+
+  .footer-box {
+    display: grid;
+    grid-template-rows: 101px auto;
+  }
+
+  .footer__contacto,
+  .footer__media,
+  .footer__enlaces {
+    width: 33%;
+  }
+
+  .footer__info div:nth-of-type(2) div {
+    margin-left: 35px;
+  }
+
+  .footer__contacto.footer-box div {
+    display: flex;
+    flex-direction: column;
+  }
+
+
   .about-us__container {
     display: flex;
     flex-direction: row;
@@ -1453,7 +1494,11 @@ nav {
   }
 }
 
+
+
 @media (min-width: 1296px) {
+
+
   #dropdownIcon {
     display: none;
   }

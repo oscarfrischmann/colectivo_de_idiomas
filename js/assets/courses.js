@@ -117,7 +117,7 @@ for (let i = 0; i < cardHeadersBGColors.length; i++) {
 	cardHeadersBG[
 		i
 		// ].style.backgroundImage = `linear-gradient(180deg, rgb(${cardHeadersBGColors[i]},1) 0% 25%, transparent 25% 100% )`;
-	].style.backgroundImage = `linear-gradient(180deg, rgb(${cardHeadersBGColors[i]}, 1) 0%, rgb(${cardHeadersBGColors[i]},0.40) 25%,transparent 25% 100% )`;
+	].style.backgroundImage = `linear-gradient(180deg, rgb(${cardHeadersBGColors[i]}, 1) 0%, rgb(${cardHeadersBGColors[i]},0.50) 25%,transparent 25% 100% )`;
 }
 
 const levelCourses = document.getElementById('coursesBtn0');

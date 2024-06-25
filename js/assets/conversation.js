@@ -1,3 +1,3 @@
-import { pricesDB } from "./login.js";
+import * as login from './login.js';
 
-console.log("bla bla");
+console.log('bla bla');

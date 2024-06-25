@@ -4,7 +4,7 @@
   color: #000000;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'segoe';
 }
 
 @font-face {
@@ -166,12 +166,12 @@
 .links .link__card a {
   background-color: #fbe800;
   padding: 0.7rem 1rem;
-  width: 100px;
+  width: fit-content;
   border: none;
   border-radius: 25px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: #706f6f;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-family: "roboto medium";
   text-align: center;
   margin: 1rem 4rem;
@@ -200,7 +200,7 @@
   grid-template-rows: 2fr 9fr 2fr;
   box-shadow: 2px 2px 5px;
   background-image: linear-gradient(180deg,
-      #e2318a 0% 15%,
+      #e2318a 0% 17%,
       transparent 15% 100%);
 }
 
@@ -387,6 +387,7 @@
   height: fit-content;
   background-color: whitesmoke;
   box-shadow: 2px 2px 5px;
+  border-radius: 0 0 15px 0;
   position: absolute;
   top: 0;
   z-index: 1;
@@ -496,7 +497,7 @@
   box-shadow: 2px 2px 5px;
   max-width: 400px;
   width: 335px;
-  height: fit-content;
+  height: 434px;
   margin: 15px auto;
   border-radius: 30px;
   align-content: center;
@@ -512,6 +513,10 @@
   font-family: "segoe";
   width: 80%;
   margin-bottom: 15px;
+}
+
+.courses__description--list a {
+  color: #40b9b9;
 }
 
 .courses__description--price {
@@ -595,9 +600,12 @@
 }
 
 #prices,
+#prices-ind,
+#prices-conversation,
 #schedule,
 #pricesCamb,
-#scheduleCamb {
+#scheduleCamb,
+#schedule-conversation {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -614,7 +622,8 @@
 
 #prices h2,
 #schedule h2,
-#scheduleCamb h2 {
+#scheduleCamb h2,
+#schedule-conversation h2 {
   font-family: "roboto bold";
   font-size: 2.3rem;
   line-height: 20px;
@@ -623,30 +632,35 @@
 
 #prices img,
 #schedule img,
-#scheduleCamb img {
+#scheduleCamb img,
+#schedule-conversation img {
   width: 100px;
 }
 
 #schedule .sc1,
-#scheduleCamb .sc1 {
+#scheduleCamb .sc1,
+#schedule-conversation .sc1 {
   color: #e2318a;
   font-size: 2.3rem;
 }
 
 #schedule .sc2,
-#scheduleCamb .sc2 {
+#scheduleCamb .sc2,
+#schedule-conversation .sc2 {
   font-size: 2rem;
   color: #706f6f;
   text-wrap: nowrap;
 }
 
 #schedule .sc3,
-#scheduleCamb .sc3 {
+#scheduleCamb .sc3,
+#schedule-conversation .sc3 {
   font-size: 1.8rem;
 }
 
 #schedule .price-container,
-#scheduleCamb .price-container {
+#scheduleCamb .price-container,
+#schedule-conversation .price-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -881,6 +895,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 0;
+  overflow-x: hidden;
 }
 
 /* main*/
@@ -1199,9 +1214,9 @@ nav {
   width: 100%;
   margin: 3em 0 0 0;
   overflow: hidden;
-  /* background-image: url(../img/violeta.png);
+  background-image: url(../img/violeta.png);
   background-size: contain;
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat;
 }
 
 .footer__bg {
@@ -1226,6 +1241,7 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 0;
+  border-radius: 20px;
   background-color: #40b9b9;
   background: -moz-linear-gradient(90deg, rgba(64, 185, 185, 1) 0%, rgba(64, 185, 185, 0.6671043417366946) 100%);
   background: -webkit-linear-gradient(90deg, rgba(64, 185, 185, 1) 0%, rgba(64, 185, 185, 0.6671043417366946) 100%);
